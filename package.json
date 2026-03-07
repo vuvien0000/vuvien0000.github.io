@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
