@@ -1,937 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <title>vuvien's website</title>
+<html>
+    <head>
+   <title>vuvien's unnecessary bio site</title>
    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="en" />
-   <meta name="description" content="Lorem ipsum">
+   <meta name="description" content="Lorem ipsum labubu dubai chocolate labubu matcha ice latte">
    <meta name="keywords" content="green,personal,vietnam,aboutme,dark">
    <meta name="author" content="Vu Vien">
 <meta property="og:image" content="https://vuvien.nekoweb.org/images/chip.gif">
-   <link rel="icon" type="image/x-icon" href="https://vuvien.nekoweb.org/images/chip.gif">
+   <link rel="icon" type="image/x-icon" href="/images/logo-white.svg">
 <meta name="theme-color" content="black" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <style>
-@font-face { 
-	font-family: segoeui; 
-	src: url('/segoeuithis.ttf'); 
+@-webkit-keyframes rotating /* rotating background */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-@font-face {
-	font-family:spacemono;
-	src: url('https://vuvien.nekoweb.org/spacemono-regular.ttf')
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-* {
-	font-family: segoeui;
+.rotating {
+  -webkit-animation: rotating 30s linear infinite;
+  -moz-animation: rotating 30s linear infinite;
+  -ms-animation: rotating 30s linear infinite;
+  -o-animation: rotating 30s linear infinite;
+  animation: rotating 30s linear infinite;
+  z-index: -10;
+  filter:grayscale(100%);
 }
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: var(--bodybackground);
-    background-blend-mode: multiply;
-    background-size: contain;
-    color:white;
-}
-html {
--webkit-tap-highlight-color:transparent;
-}
-:root {
-    --accent : #00be91;
-    --bodybackground : black;
-}
-html {
-    scrollbar-color: rgba(0,0,0,0);
-    scrollbar-width: 1px;
-}
-html::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}  
-html::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,0);
-}
-html::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0);
-}
-.tile {
-    scrollbar-color: rgba(0,0,0,0);
-    scrollbar-width: 1px;
-}
-.tile::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}  
-.tile::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,0);
-}
-.tile::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0);
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.a {
-perspective: 500px;
-}
-.container {
-	display: flex;
-	backface-visibility: hidden;
-	animation: startUp 1s;
-}
-@keyframes startUp {
-  from {
- transform:rotateY(-120deg) translate(-1000px);
-transform-style: preserve-3d;
-opacity: 1;
-  }
-  to {
-  transform:rotateY(0deg) translate(0px);
-transform-style: preserve-3d;
-opacity: 1;
-  }
-}
-@keyframes enter {
-  from {
-  	transform:rotateY(0deg) translate(0px);
-transform-style: preserve-3d;
-opacity: 1;
-  }
-  to {
-  	transform:rotateY(120deg)translate(1000px);
-transform-style: preserve-3d;
-opacity: 1;
-  }
-}
-
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 5px;
-    padding: 4px;
-    flex: 1;
-    grid-auto-rows: calc((100vw - 30px) / 6);
-    position: relative;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    z-index: 1;
-}
-.tile {
-    background-color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    grid-column: span 2;
-    grid-row: span 2;
-    position: relative;
-    transition: all 0.2s;
-    overflow: auto;
-    padding: 10px;
-}
-.tile:active {
-    scale: 0.95;
-}
-
-.tile.large {
-    grid-column: span 4;
-    grid-row: span 4;
-}
-.tile.wide {
-    grid-column: span 4;
-    grid-row: span 2;
-}
-.tile.tall {
-    grid-column: span 2;
-    grid-row: span 4;
-}
-.icon {
-    font-size: 2rem;
-    text-align: center;
-    width: 76px;
-    height: 76px;
-}
-.icon-name {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    font-size: 1rem;
-}
-.tile:hover {
-    cursor: pointer;
-}
-button:hover {
-    cursor: pointer;
-}
-
-
-
-@media (min-width: 768px) {
-    .container {
-        margin: 1rem 0;
-    }
-
-    .main-grid {
-        grid-template-columns: repeat(12, 1fr); /* 12 columns for desktop */
-        grid-auto-rows: calc((100vw - 60px) / 12); /* Adjusting for desktop */
-        padding: 3rem;
-        padding-top: 0;
-    }
-
-    .tile {
-        grid-column: span 3;
-        grid-row: span 3;
-    }
-
-    .tile.large {
-        grid-column: span 3;
-        grid-row: span 3;
-    }
-
-    .tile.wide {
-        grid-column: span 6;
-        grid-row: span 3;
-    }
-
-}
-
-@media (min-width: 1200px) {
-    .container {
-        margin: 1rem 0;
-    }
-    
-    .main-grid {
-        grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: calc((100vw - 120px) / 12);
-        padding: 3rem;
-        padding-top: 0;
-    }
-
-    .tile {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .tile.large {
-        grid-column: span 3;
-        grid-row: span 3;
-    }
-
-    .tile.wide {
-        grid-column: span 6;
-        grid-row: span 3;
-    }
-
-}
-.tile.banner {
-grid-column: span 6;
-        grid-row: span 2;
-background-image:url('https://raw.githubusercontent.com/vu-vien/vu-vien/refs/heads/main/bk2.gif');
-background-size:300px auto, cover;
-background-repeat: no-repeat;
-box-shadow: 0px 0px 0px 2px var(--accent) inset;
-background-color: black;
-}
-.tile.banner:hover {
-	filter: invert(100%);
-}
-.tile.small {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-.tile.wide-small {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-.tile p {
-	padding: 0;
-	margin: 5px;
-}
-#visitors {
-	font-weight: bold;
-}
-.tile {
-
-}
-p {
+	background-color: black;
+	color:white;
 	padding: 0;
 	margin: 0;
 }
-.tile.music {
-	background:url('/images/album.webp');
-	background-size:cover ;
-	background-repeat: no-repeat;
-	box-shadow: 0px 0px 0px 2px #214b92 inset;
+@font-face {
+	font-family: spacemono;
+	src: url('/spacemono-regular.ttf')
+}
+* {
+	font-family: spacemono;
+}
+.wrap {
+	margin-left: auto;
+	margin-right:auto;
+	max-width: 700px;
+}
+.padding {
+padding: 30px;
+}
+.header h1 {
+	font-weight: normal;
+	font-size: 80px;
+	margin: 0;
+word-break: break-all;
 }
 .header p {
-	color:white;
-	line-height: 10px;
-}
-.header {
-	margin-block: 10px;
-	padding-inline: 20px;
-	padding-block: 10px;
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-	visibility: hidden;
-}
-.icon-content {
-	font-size: 30px;
-	text-align: right;
-	margin: 40px;
-	line-height: 25px;
-}
-.tile.gallery {
-	background:url('/images/pic1.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	box-shadow: 0px 0px 0px 2px rgba(0,0,0,0) inset;
-	color:white;
-}
-
-.yt-video {
-	opacity: 0;
-	z-index: -3;
-	transition: 0.3s;
-}
-.yt-video:hover {
-	opacity: 1;
-	z-index: 1;
-}
-.spotifer {
-	opacity: 0;
-	z-index: -3;
-	transition: 0.3s;
-	background:#0f577d;
-}
-.spotifer:hover {
-	opacity: 1;
-	z-index: 1;
-}
-.bar {
-	width: 100%;
-	height: 35px;
-	position: fixed;
-	bottom: 0;
 	margin: 0;
-	color:white;
-	background: rgba(0,0,0,0.5);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  z-index: 100;
-  text-align: center;
-  font-size: 20px;
-  transition: 0.3s;
-  padding-block: 15px;
+	opacity: 0.5;
 }
-.bar img {
-	width: 70px;
-	margin-top: -17px;
-pointer-events: none;
+* {
+-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.bar:active {
-	background: rgba(0,190,145,0.75);
-color:#39db90;
-}
-.bottom-filler {
-	height: 100px;
-	width: 100%;
-}
-.water-filter {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background: url('/images/water.gif');
-	opacity: 1;
-	z-index: 0;
-	display: none;
-}
-.bliss {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background: url('https://images2.alphacoders.com/941/thumb-1920-941898.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	opacity: 1;
-	z-index: 0;
-	display: none;
-}
-.more-apps {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background: rgba(0,0,0,0.5);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-	opacity: 0;
-	z-index: -10;
-	padding: 30px;
-}
-@keyframes left {
-  from {
-  	transform:translate(1000px);
-opacity: 0;
-  }
-  to {
-  	transform:translate(0px);
-opacity: 1;
-  }
-}
-@keyframes right {
-  from {
-  	transform:translate(0px);
-opacity: 1;
-  }
-  to {
-  	transform:translate(1000px);
-opacity: 0;
-  }
-}
-.more-apps .back {
-	width: 50px;
-	height: auto;
-}
-.more-apps .ex-apps {
-	width: 75px;
-	weight:auto;
-pointer-events: none;
-}
-.more-apps p {
+.logo {
 	position: relative;
+	float: left;
+	width: 50px;
+    top:45px;
+    pointer-events: none;
+}
+.socials img {
+	margin-inline: 5px;
+	position: relative;
+	width:50px;
+	margin-block-start: 20px;
 	transition: 0.4s;
 }
-.more-apps .label {
-position:relative;
-right:-20px;
-font-size: 30px;
-top:-30px;
+.socials {
+	border: 2px solid rgba(0,0,0,0);
 }
-.more-apps p:hover {
+a {
+	text-decoration: none;
+	transition: 0.3s;
+color:#39db90;
 }
-.more-apps p:active {
-	scale: 0.95;
+.link:hover {
+	font-size: 20px;
+	font-weight: bold;
 }
-.back1 {
-	margin-block-end: 0px;
+.socials img:hover {
+	width: 70px;
+}
+.socials img:active {
+	opacity: 0.5;
+}
+hr {
+margin-block: 20px;
+	border:none;
+	border-block-start: 2px dashed rgba(255,255,255,0.25);
+}
+.box1 {
+	border-radius: 10px;
+	padding: 10px;
+	padding-block: 20px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.box1 img {
+	border-radius: 7px;
+}
+.box1:hover {
+	background: rgba(57,219,143,0.1);
+}
+.box2 {
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    height: 40px;
+    margin-block-end: 20px;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.box2 img {
+	height:70%;
+	float: left;
+	margin: 5px;
+}
+.box2 p {
+	margin: 7px;
+	margin-inline-start: 50px;
+}
+.box2:hover {
+	background: rgba(57,219,143,0.1);
+}
+
+.box3 {
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.box3:active {
+	color:#39db90;
+	filter: invert(100%);
+}
+.box3 img {
+	height: 80px;
+	position: relative;
+	float: left;
+	top: -8px;
+	border-radius: 5px;
+	margin-inline: 10px;
+	margin-inline-end: 20px;
+	border:2px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+}
+.box4 {
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.discord {
+	width: 90%;
 	position: relative;
 }
-.back1 p {
-font-weight: bold;
-position:relative;
-right:-70px;
-font-size: 30px;
-bottom: 52px;
+summary {
+	margin-inline-start: 10px;
 }
-@keyframes zoom {
-  from {
-  	scale: 0.9;
-  }
-  to {
-  	scale: 1;
-  }
-}
-@keyframes shrink {
-  from {
-  	scale: 1;
-  }
-  to {
-  	scale: 0.9;
-  }
-}
-.apps-page {
-	width: 100%;
-	height: 90%;
-	overflow: auto;
-}
-.alert {
-	position: fixed;
-	width: 100%;
-	height: 85px;
-background: rgba(0,0,0,0.5);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  display: none;
-}
-.alert p {
-	text-align: center;
-	margin-block: 20px;
-}
-#statuscafe:hover {
-	scale:1.45
-}
-#statuscafe:active {
-	scale: 1.3;
-}
-#statuscafe {
-    padding: 10px;
-    scale: 1.4;
+.button1 {
+	margin-inline-end: 25px;
+	margin-top: -80.5px;
+	display: none;
+	float: right;
 	color:white;
-	line-height: 15px;
-	transition:0.3s;
+	font-size: 20px;
+border-radius: 10px;
+	padding: 15px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.1);
+    transition: 0.2s;
+    border-block-end: 7px solid rgba(255,255,255,0.1);
 }
-#statuscafe-username {
-    margin-bottom: .5em;
-    font-weight: bold;
-    font-size: 10px;
+button:active {
+	scale:0.9;
 }
-#statuscafe-content {
-	font-size: 12px;
+.button2 {
+	color:white;
+	font-size: 20px;
+border-radius: 10px;
+	padding: 15px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.1);
+    transition: 0.2s;
+    border-block-end: 7px solid rgba(255,255,255,0.1);
+}
+.button3 {
+	display: none;
+	width: 100%;
+	color:white;
+	font-size: 20px;
+border-radius: 10px;
+	padding: 10px 15px;
+	border: 2px solid rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.1);
+    transition: 0.2s;
+    border-block-end: 4px solid rgba(255,255,255,0.1);
+}
+
+@media screen and (width >= 600px) {
+	.button1 {
+		display: inherit;
+	}
+}
+@media screen and (width <= 600px) {
+	.button3 {
+		display: inherit;
+	}
+}
+.gamebox {
+	width: 90%
+	margin-left: auto;
+	margin-right: auto;
+}
+.top-bar {
+	filter: drop-shadow(0px 0px 5px black);
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 5px;
+	background: linear-gradient(to right,#b300ff,#00be91)
+}
+.gallery img {
+	width: 100%;
+}
+.by {
+	border-radius: 7px;
+	border:2px dashed rgba(255,255,255,0.25);
+	padding: 10px;
+	margin-block: 10px;
+	background: rgba(255,255,255,0.1);
+}
+.btn2 {
+ font-family: spacemono;
+ font-size:20px;
+ background:rgba(255,255,255,0.1);
+ padding: 14px 40px;
+ color:white;
+ border-radius: 7px;
+ border: 2px solid rgba(255,255,255,0.1);
+border-block-end: 7px solid rgba(255,255,255,0.1);
+ transition: 0.4s;
+}
+.dialog {
+width:90%;
+max-width:800px;
+height:600px;
+background-color: rgba(0,0,0,0.9);
+border:2px solid rgba(255,255,255,0.25);
+border-radius:10px;box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px 5px, rgba(0, 0, 0, 1) 0px 1px 3px -1px;
+overflow:hidden;
+animation: open 0.4s;
+}
+@keyframes open {
+	from {
+		opacity: 0;
+		scale: 0.9;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
+	}
 }
     </style>
-</head>
-<body id="body">
+    </head>
+    <body>
+<img alt="trong dong dong son background" class="rotating" src="https://vuvien.nekoweb.org/trongdong2.png" style ="pointer-events: none;opacity:0.15;position:fixed; z-index:-1; top:-350px" width="1000px" height="1000px">
 
-	<div id="bliss" class="bliss">
-	</div>
-	<script>
-	// This is so good thanks
-// Source - https://stackoverflow.com/a/53192539
-// Posted by Mahbub Hasan, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-03-01, License - CC BY-SA 4.0
-
-  var container = document.querySelector("body");
-
-  container.addEventListener("touchstart", startTouch, false);
-  container.addEventListener("touchmove", moveTouch, false);
-
-  // Swipe Up / Down / Left / Right
-  var initialX = null;
-  var initialY = null;
-
-  function startTouch(e) {
-    initialX = e.touches[0].clientX;
-    initialY = e.touches[0].clientY;
-  };
-
-  function moveTouch(e) {
-    if (initialX === null) {
-      return;
-    }
-
-    if (initialY === null) {
-      return;
-    }
-
-    var currentX = e.touches[0].clientX;
-    var currentY = e.touches[0].clientY;
-
-    var diffX = initialX - currentX;
-    var diffY = initialY - currentY;
-
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-      // sliding horizontally
-      if (diffX > 0) {
-        // swiped left
-const apps = document.getElementById("container") ;
-        apps.style.animation = "shrink 0.5s" ;
-        apps.style.scale = 0.9 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 1 ;
-        panel.style.zIndex = 10 ;
-        panel.style.animation = "left 0.5s" ;
-        s = 0;
-        
-      } else {
-        // swiped right
-        const apps = document.getElementById("container") ;
-        apps.style.animation = "zoom 0.5s" ;
-        apps.style.scale = 1 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 0 ;
-        setTimeout(back, 250);
-        panel.style.animation = "right 0.5s" ;
-        function back() {
-        	s = 1;
-panel.style.zIndex = -10 ;
-        }
-      }  
-    } else {
-      // sliding vertically
-      if (diffY > 0) {
-        // swiped up
-        console.log("swiped up");
-      } else {
-        // swiped down
-        console.log("swiped down");
-      }  
-    }
-
-    initialX = null;
-    initialY = null;
-
-    e.preventDefault();
-  };
-
-	</script>
-	<div id="more-apps" class="more-apps">
-		<div onclick="close2()" class="back1">
-		<script>
-			function close2() {
-        const apps = document.getElementById("container") ;
-        apps.style.animation = "zoom 0.5s" ;
-        apps.style.scale = 1 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 0 ;
-        panel.style.animation = "right 0.5s" ;
-setTimeout(() => {
-  panel.style.zIndex = -10 ;
-}, 250);
-			}
-		</script>
-		<img class="back" src="/images/icons/back.png">
-	    <p>NAVIGATION</p>
-		</div>
-		<div class="apps-page">
-		<p onclick="here()">
-			<script>
-				function here() {
-					alert("You're already at [ HOME ] !")
-				}
-			</script>
-		<img style="filter:grayscale(100%)" class="ex-apps" src="/images/icons/home.jpg">
-		<span class="label">Home</span>
-		</p>
-		<a href="/about">
-		<p>
-		<img class="ex-apps" src="/images/icons/about.jpg">
-		<span class="label">About me</span>
-		</p>
-		</a>
-		<a href="/gallery">
-		<p>
-		<img class="ex-apps" src="/images/icons/pictures.ico">
-		<span class="label" id="shared">Gallery</span>
-<span style="display:none" id="one">https://vuvien.xyz</span>
-		</p>
-		</a>
-<a href="/links">
-		<p>
-		<img class="ex-apps" src="/images/icons/link.jpg">
-		<span class="label">Links & Friends</span>
-		</p>
-		</a>
-		<a href="/gb">
-		<p>
-		<img class="ex-apps" src="/images/icons/gb.jpg">
-		<span class="label">Sign guestbook</span>
-		</p>
-		</a>
-
-<a href="mailto:vuvien1000@gmail.com">
-		<p>
-		<img class="ex-apps" src="/images/icons/mail.png">
-		<span class="label">Mail me</span>
-		</p>
-		</a>
-		<a href="https://spacehey.com/vuvien">
-		<p>
-		<img class="ex-apps" src="/images/icons/spacehey.png">
-		<span class="label">Space Hey</span>
-		</p>
-		</a>
-		<p onclick="copy_to_clipboard('one')">
-<script>
-
-function copy_to_clipboard( elm_id ) {
-
-    var text = document.getElementById( elm_id ).innerHTML;
-
-    navigator.clipboard.writeText( text );
-    alert("Link copied!");
-document.getElementById('shared').innerHTML = "Link copied!" ;
-  }
-</script>
-		<img class="ex-apps" src="/images/icons/share.png">
-		<span class="label" id="shared">Share</span>
-<span style="display:none" id="one">https://vuvien.xyz</span>
-		</p>
-<a href="https://nekoweb.org/follow/vuvien.nekoweb.org">
-		<p>
-		<img class="ex-apps" src="/images/icons/nekoweb.jpg">
-		<span class="label">Follow Nekoweb</span>
-		</p>
-		</a>
-
-		<a href="https://github.com/vu-vien/vuvien0000.github.io">
-		<p>
-		<img class="ex-apps" src="/images/icons/folder.png">
-		<span class="label">Source <span style="opacity:0.5">(Not yet)</span></span>
-		</p>
-		</a>
-		<a href="https://www.deviantart.com/dakirby309/art/Metro-UI-Icon-Set-725-Icons-280724102">
-		<p>
-		<img class="ex-apps" src="/images/icons/photos.ico">
-		<span class="label">Icon credits</span>
-	    </p>
-	    </a>
-<div style="visibility:hidden;width:100%;height:200px">a</div>
-	    </div>
-	</div>
-	<div id="water" class="water-filter"></div>
-
-	<div onclick="more2()" class="bar">
-		<script>
-function showTime() {
-    const timeNow = new Date().toLocaleTimeString("en-US");
-    document.getElementById('clock2').textContent = timeNow;
-}
-setInterval(showTime, 1000);
-//
-var s = 1 ;
-function more2() {
-	if (s == 1) {
-const apps = document.getElementById("container") ;
-        apps.style.animation = "shrink 0.5s" ;
-        apps.style.scale = 0.9 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 1 ;
-        panel.style.zIndex = 10 ;
-        panel.style.animation = "left 0.5s" ;
-        s = 0 ;
-	} else {
-const apps = document.getElementById("container") ;
-        apps.style.animation = "zoom 0.5s" ;
-        apps.style.scale = 1 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 0 ;
-        panel.style.animation = "right 0.5s" ;
-setTimeout(() => {
-  panel.style.zIndex = -10 ;
-s = 1 ;
-}, 250);
-	}
-}
-		</script>
-<img src="/images/icons/home.png">
-		<p><span id="clock2"></span></p>
-	</div>
-
-	<div class="alert">
-		<p>The deployment to <strong>vuvien.xyz</strong> has been started.
-		<br>We'll leave nekoweb soon!</p>
-	</div>
-<div id="top" class="a">
-	<div class="header">
-		<a href="/index">
-	<p>vuvien.nekoweb.org</p>
-	</a>
-	</div>
-
-    <div id="container" class="container">
-
-    <div class="main-grid">
-
-    	<div class="tile banner">
-
+    	<div class="top-bar">
+    		
     	</div>
+    	<div class="padding">
+    	<div class="wrap">
+<dialog id="dialog" class="dialog">
+ ">
+  <form method="dialog">
+	<h4 style="visibility:hidden">a</h4>
 
-    	<div onclick="enter1()" class="tile wide">
-	<script>
-		function enter1() {
-			document.getElementById("container").style.animation = "enter 1s";
-document.getElementById("container").style.opacity = 0;
-setTimeout(() => {
-  window.location = "/about" ;
-}, 250);
-		}
-	</script>
-	<p class="icon-name">Click for about me</p>
-<div id="statuscafe">
-	<div id="statuscafe-username">
-		•••
-	</div>
-	<div id="statuscafe-content">
-		Loading status...
-	</div>
-	</div>
-	<script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
-</div>
-<div onclick="discord()"  class="tile small">
-	<script>
-		function discord() {
-			window.location = "https://discord.com/users/777798212743856128";
-		}
-	</script>
-	<img id="icon1" style="pointer-events: none;width:70%" src="/images/icons/discord.png">
-</div>
+    <button class="btn2" style="position:absolute;right:15px;top:15px;" type="submit">Close</button>
+    <h2 style="color:white;position:absolute;left:30px;top:0px">Guestbook</h2>
+<iframe src="https://vuvien.atabook.org/" width="100%" height="535px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+  </form>
+</dialog>
+        <div class="header">
+	<img class="logo" src="/images/logo-white.svg">
+        	<h1>vuvien</h1>
+        	<p>I like to make things, and so i'm learning how to.</p>
+        <div class="socials">
+        	<a href="https://discord.com/users/777798212743856128">
+        	<img style="top:2px" src="images/icons2/dc.png">
+        </a>
+        	<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI">
+        	<img src="images/icons2/tt.png">
+        </a>
+        	<a href="https://castle.xyz/@that_new_emoji__">
+        	<img src="images/icons2/cc.png">
+        </a>
+        	<a href="https://github.com/vuvien0000">
+        	<img src="images/icons2/gh.png">
+        </a>
+        	<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847">
+        	<img src="images/icons2/rb.png">
+        </a>
+        </div>
+        </div>
+        <hr>
+        <details class="box1">
+        	<summary>Who the heck is <strong>vuvien</strong> ??</summary>
+	<hr>
+	<p><span style="font-size:30px">Xin chào!! I'm <strong>Vien</strong></span>
+	<br><br>A random <a class="link" href="https://en.wikipedia.org/wiki/Vietnam">Vietnamese</a> & <a class="link" href="https://gender.fandom.com/wiki/Demigirl">demigirl</a> came from <a class="link" href="https://en.wikipedia.org/wiki/Ngh%E1%BB%87_An_province">Nghe An</a>, who spending alot of time on the internet doing random things. 
+	<br>Somehow, i'm being known for creating stuff on <a class="link" href="https://castle.xyz">castle.xyz</a>.It's a mobile platform for small games + built-in light weight game engine.
+	<br><br>A little bit more about myself:
+	<br>My name is Hoan Vien, but please call me vuvien/vien !
+	<br>I'm young.
+	<br>Struggling with JavaScript ALOT u_u 
+	<br>In my free time, i do random things on the net or just go outside searching for fresh air.
+	<br>I'm NOT a dev, designer, animator, artist bla bla bla...
+        <br><br>Games i like<br>
+        <span style="opacity:0.5">These are the best!</span><br><br>
+<span class="gamebox">
+<img style="width:100px;height:auto" class="game" src="/images/g1.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g5.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g8.jpeg">
+<img style="width:100px;height:auto" class="game" src="/images/g3.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g4.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g7.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g2.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g6.jpg">
+</span>
+<br><br>
+My email: <a href="mailto:vuvien1000@gmail.com">vuvien1000@gmail.com</a>
+</p>
+        </details>
+        <div onclick="show()" class="box2">
+        	<script>
+const dialog = document.getElementById("dialog"); 
 
-<div onclick="github()" class="tile small">
-	<script>
-		function github() {
-			window.location = "https://github.com/vuvien0000";
-		}
-	</script>
-	<img id="icon2" style="pointer-events: none;width:70%;" src="/images/icons/github2.png">
-
-</div>
-
-
-<div onclick="castle()" class="tile small">
-	<script>
-		function castle() {
-			window.location = "https://castle.xyz/@vuvien0000";
-		}
-	</script>
-	<img id="icon3" style="pointer-events: none;width:100%" src="/images/icons/castle.png">
-
-</div>
-
-
-<div onclick="roblox()"  class="tile small">
-	<script>
-		function roblox() {
-			window.location = "https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847";
-		}
-	</script>
-	<img id="icon4" style="pointer-events: none;width:100%" src="/images/icons/roblox.png">
-
-</div>
-
-
-<div onclick="tiktok()" class="tile small">
-	<script>
-		function tiktok() {
-			window.location = "https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI";
-		}
-	</script>
-	<img id="icon5" style="pointer-events: none;width:60%" src="/images/icons/tiktok.png">
-</div>
-
-<div onclick="more()" class="tile small">
-	<script>
-		function more() {
-const apps = document.getElementById("container") ;
-        apps.style.animation = "shrink 0.5s" ;
-        apps.style.scale = 0.9 ;
-        const panel = document.getElementById("more-apps") ;
-        panel.style.opacity = 1 ;
-        panel.style.zIndex = 10 ;
-        panel.style.animation = "left 0.5s" ;
-        s = 0;
-		}
-	</script>
-	<img id="icon6" style="pointer-events: none;width:100%" src="/images/icons/home.png">
-	</div>
-<div class="tile wide-small">
-<iframe src="//incr.easrng.net/badge?key=-2" style="z-index:5;filter: drop-shadow(0px 0px 2px gray);border-radius:4px;display:block;margin-left:auto;margin-right:auto;scale:1.7;background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88px" height="31px" frameborder="0"></iframe>
-</div>
-<div onclick="nekoweb()" class="tile wide-small">
-<script>
-let domain = "vuvien.nekoweb.org"; // <<<--- Insert your domain here!
-
-(async () => {
-  try {
-    const request = await fetch(`https://nekoweb.org/api/site/info/${domain}`);
-    const json = await request.json();
-
-    const updated = new Date(json.updated_at).toLocaleDateString(); // Formats Last Updated text
-    const created = new Date(json.created_at).toLocaleDateString(); // Formats Creation Date text
-
-    if (document.getElementById("created"))
-      document.getElementById("created").innerHTML =
-        `${created}`;
-    if (document.getElementById("updated"))
-      document.getElementById("updated").innerHTML =
-        `${updated}`;
-    if (document.getElementById("visitors"))
-      document.getElementById("visitors").innerHTML =
-        `${json.views}`;
-    if (document.getElementById("followers"))
-      document.getElementById("followers").innerHTML =
-        `${json.followers}`;
-  } catch (error) {
-    console.error(error);
-    // If you wish to insert some fallback here, you may do so!
-  }
-})();
-</script>
-<script>
-	function nekoweb() {
-		alert("It shows how much visitors, click another tile for something else!");
-	}
-</script>
-<h1 style="font-weight:normal;font-family:spacemono;font-size:50px;line-height:0px" id="visitors">{!}</h1>
-
-</div>
-<div onclick="enter2()" class="tile">
-	<script>
-		function enter2() {
-			document.getElementById("container").style.animation = "enter 1s";
-document.getElementById("container").style.opacity = 0;
-setTimeout(() => {
-  window.location = "/gb" ;
-}, 250);
-		}
-	</script>
-	<img id="icon7" style="pointer-events: none;width:45%" src="/images/icons/gb.png">
-
-<p class="icon-name">Sign guestbook</p>
-</div>
-<div onclick="enter3()" class="tile gallery">
-	<script>
-		function enter3() {
-			document.getElementById("container").style.animation = "enter 1s";
-document.getElementById("container").style.opacity = 0;
-setTimeout(() => {
-  window.location = "/gallery" ;
-}, 250);
-		}
-	</script>
-	<p class="icon-name">Gallery</p>
-</div>
-<div style="color:white" class="tile music" onclick="press()">
-<script>
-// music player script
-    const song =
-    document.getElementById('song');
-
-function press() {
-if (document.getElementById("song").paused == true) {
-    document.getElementById("song").play();
-    document.getElementById("play-button").innerHTML =
-      "❚❚";
-  } else if (document.getElementById("song").paused == false) {
-   document.getElementById("song").pause();
-   document.getElementById("play-button").innerHTML =
-      "▶";
-  }
+function show() { 
+  dialog.showModal(); 
 }
-setInterval(() => {
-  const progressBar = audioPlayer.querySelector(".progress");
-  progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
-  audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(
-    audio.currentTime
-  );
-}, 500);
-</script>
-<audio src="solitude.mp3" id="song"></audio>
-<p id="play-button" style="opacity:0.5;font-size:50px;line-height:0px;margin-block-end:20px;">▶</p>
-	<p class="icon-name">Blocktales-Solitude <br><span style="opacity:0.5">DragKun</span></p>
-</div>
-<div onclick="enter4()" class="tile">
-	<script>
-		function enter4() {
-			document.getElementById("container").style.animation = "enter 1s";
-document.getElementById("container").style.opacity = 0;
-setTimeout(() => {
-  window.location = "/links" ;
-}, 250);
-		}
-	</script>
-	<img id="icon8" style="pointer-events: none;width:45%" src="/images/icons/link.png">
-
-	<p class="icon-name">Links & Friends</p>
-</div>
-<div onclick="join()" style="box-shadow:0px 0px 40px 40px var(--accent) inset;color:white;background-size:cover;background-repeat:no-repeat" id="discord-server" class="tile">
+        	</script>
+        	<img src="/images/icons/gb.png"><p>Sign my guestbook</p>
+        </div>
+        <a style="color:white" href="https://discord.gg/6Phe3DHPym">
+        <div class="box3">
 <script>
 // thank you duducat/ducdat0507
 let params = new URLSearchParams("?invite=GNQ2CUYyYp");
@@ -956,22 +422,12 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
 
                 }
             )
-var gicon = "7ecd6120cdd9247a6102a043bbc29262" ;
-</script>
-<script>
-var img = `url('https://cdn.discordapp.com/icons/1421793460440268802/${gicon}')`;
-document.getElementById("discord-server").style.backgroundImage = `${img}` ;
-function test() {
-}
-function join() {
-	window.location = "https://discord.gg/GNQ2CUYyYp" ;
-}
 </script>
         <div id="upper">
             <div style="display:none" id="banner"></div>
         </div>
         <div id="lower">
-<div style="display:none" id="iconframe">
+<div id="iconframe">
 
 <img id="icon">
             </div>
@@ -979,150 +435,68 @@ function join() {
                 <div style="display:none" id="inviter">
                     <span style="display:none" id="invitername"></span><span id="invitertag"></span>
                 </div>
-                <div style="display:none" id="servername">Loading...</div>
-                <p style="font-size:30px" id="counts">
-                    <span id="membercount">•••</span><span style="font-size:22px;opacity:0.5">Members</span> <br> <span id="onlinecount">•••</span><span style="font-size:22px;opacity:0.5">Online</span> <span style="display:none" id="boostcount"></span>
+                <p style="position:relative;top:-10px" id="servername">Loading...</p>
+                <p style="margin:0;font-size:25px" id="counts">
+                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span id="onlinecount">•••</span><span style="display:none" id="boostcount"></span>
                 </p>
+                <button class="button3">Join</button>
             </div>
         </div>
-	<p class="icon-name">Discord server</p>
-</div>
-<div onclick="shrimp()" style="box-shadow:0px 0px 0px 2px var(--accent) inset;background:url('/images/shrimp.gif');background-position:center; background-repeat:no-repeat; background-size:250%" class="tile">
-<script>
-	function shrimp() {
-		window.location = "/shrimp" ;
-	}
-</script>
-</div>
-<div style="padding:0;box-shadow:0px 0px 0px 2px #00be91 inset" onclick="refreshIframe()" class="tile large">
-	<h1 style="position:absolute;text-align:center">Loading...</h1>
-<iframe name="video" style="z-index:2;margin:0" src="https://ncs.giganttech.net/random-video" width="100%" height="100%" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-<script>
-// refresh vid
-function refreshIframe() {
-    var ifr = document.getElementsByName('video')[0];
-    ifr.src = ifr.src;
-}
-</script>
-</div>
+        <button class="button1">Join</button>
+        </div>
+        </a>
+        <details class="box1">
+        	<summary>Free minecraft!</summary>
+        	<hr>
+        	FREE MINECRAFT WORKING 2067!!! 
+        	CLAIM NOW BEFORE YOU GET A LOW TAPER FADE!!!
+        <br>(gone sexual)
+        <br><br>Get your minecraft today!
+        <br><br><a href="https://ncs.giganttech.net/random-video">
+        <button class="button2">GET MINECRAFT</button></a>
+        <br><br><span style="opacity:0.5">DISCLAIMER: This is a joke</span>
+        </details>
+        <details class="box1">
+        	<summary>Cool castlers that has a website</summary>
+        	<hr>
+        	Still under update, adding more later<br>
+        	<a href="https://wafelz.straw.page">Wafelz • Strawpage</a>
+	<br><a href="https://xarryberry.straw.page">Xarry (XarryBerry) • Strawpage</a>
+        </details>
+        <details class="box1">
+        	<summary>OC Gallery</summary>
+        <hr>
+        My evil chud art showcase, credits under each image (i respect)<br>
+        <br><div class="gallery">
 
-<div onclick="atile()" style="background:url('/images/atile.jpg'); background-repeat:no-repeat; background-size:cover" class="tile">
-	<script>
-	function atile() {
-var root = document.querySelector(':root');
-root.style.setProperty('--accent','#fde500');
-document.getElementById("container").style.color = "black";
-document.getElementById("icon1").style.filter = "invert(100%)"
-document.getElementById("icon2").style.filter = "invert(100%)"
-document.getElementById("icon3").style.filter = "invert(100%)"
-document.getElementById("icon4").style.filter = "invert(100%)"
-document.getElementById("icon5").style.filter = "invert(100%)"
-document.getElementById("icon6").style.filter = "invert(100%)"
-document.getElementById("icon7").style.filter = "invert(100%)"
-document.getElementById("icon8").style.filter = "invert(100%)"
-document.getElementById('bliss').style.display = "none" ;
-document.getElementById('water').style.display = "none" ;
-document.getElementById('container').style.opacity = 1 ;
-document.getElementById("statuscafe").style.color = "black";
-	}
-	</script>
-	<p style="color:black" class="icon-name">Yellow theme</p>
-</div>
-<div onclick="water()" style="color:white;background:url('/images/water.gif'); background-repeat:no-repeat; background-size:cover" class="tile">
-	<script>
-	var root = document.querySelector(':root');
-	function water() {
-	document.getElementById('container').style.opacity = 0.5 ;
-	document.getElementById('water').style.display = "inherit" ;
-	root.style.setProperty('--accent','#00a2ff');
-document.getElementById("container").style.color = "white";
-document.getElementById("icon1").style.filter = "invert(0%)"
-document.getElementById("icon2").style.filter = "invert(0%)"
-document.getElementById("icon3").style.filter = "invert(0%)"
-document.getElementById("icon4").style.filter = "invert(0%)"
-document.getElementById("icon5").style.filter = "invert(0%)"
-document.getElementById("icon6").style.filter = "invert(0%)"
-document.getElementById("icon7").style.filter = "invert(0%)"
-document.getElementById("icon8").style.filter = "invert(0%)"
-document.getElementById('bliss').style.display = "none" ;
-document.getElementById("statuscafe").style.color = "white";
-	}
-	</script>
-	<p class="icon-name">Water theme</p>
-</div>
-<div style="padding:0" class="tile">
-<iframe style="zoom:0.75" src="https://webtiles.kicya.net/e/vuvien.nekoweb.org" width="100%" height="100%" frameborder="0"></iframe>
-</div>
-<div onclick="bliss()" style="color:white;background:url('https://images2.alphacoders.com/941/thumb-1920-941898.jpg'); background-repeat:no-repeat; background-size:cover" class="tile">
-	<script>
-	var root = document.querySelector(':root');
-	function bliss() {
-	document.getElementById('container').style.opacity = 1 ;
-	document.getElementById('bliss').style.display = "inherit" ;
-	root.style.setProperty('--accent','rgba(255,255,255,0.5)');
-document.getElementById("container").style.color = "black";
-document.getElementById("icon1").style.filter = "invert(100%)"
-document.getElementById("icon2").style.filter = "invert(100%)"
-document.getElementById("icon3").style.filter = "invert(100%)"
-document.getElementById("icon4").style.filter = "invert(100%)"
-document.getElementById("icon5").style.filter = "invert(100%)"
-document.getElementById("icon6").style.filter = "invert(100%)"
-document.getElementById("icon7").style.filter = "invert(100%)"
-document.getElementById("icon8").style.filter = "invert(100%)"
-document.getElementById('water').style.display = "none" ;
-document.getElementById("statuscafe").style.color = "black";
-	}
-	</script>
-	<p class="icon-name">Bliss theme</p>
-</div>
-<div onclick="waffle()" style="box-shadow:0px 0px 0px 2px var(--accent) inset;background:url('/images/waffle.gif'); background-repeat:no-repeat; background-size:cover" class="tile">
-<script>
-	function waffle() {
-		window.location = "/waffle" ;
-	}
-</script>
-</div>
-<div onclick="chips()" style="box-shadow:0px 0px 0px 2px var(--accent) inset;background:url('/images/chip.gif'); background-repeat:no-repeat; background-size:cover" class="tile">
-<script>
-	function chips() {
-		window.location = "/chips" ;
-	}
-</script>
-</div>
-<div onclick="fries()" style="box-shadow:0px 0px 0px 2px var(--accent) inset;background:url('/images/fries.gif'); background-repeat:no-repeat; background-size:cover" class="tile">
-<script>
-	function fries() {
-		window.location = "/fries" ;
-	}
-</script>
-</div>
-<div onclick="sound()" style="color:black;background:url('/images/goosf.jpg'); background-repeat:no-repeat; background-size:cover" class="tile">
-<script>
-	function sound() {
-		var sound = document.getElementById('sound');
-		sound.play();
-	}
-</script>
-<audio id="sound" src="loud.mp3"></audio>
-<p class="icon-name">Do not click</p>
-</div>
-<div class="tile tall">
-	<p style="font-size:30px">•••</p>
-	<p class="icon-name">Responeko webring</p>
-</div>
-<div style="padding:0;background:url('/images/juno.jpg'); background-repeat:no-repeat; background-size:cover" class="tile wide">
-<iframe class="yt-video" width="100%" height="100%" src="https://www.youtube.com/embed/-XdgcOyNN0s?si=jJ-X8v2aHH9AfJgg&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div style="padding:0;background:url('/images/parachio.jpg'); background-repeat:no-repeat; background-size:cover" class="tile wide">
-<iframe class="spotifer" data-testid="embed-iframe" src="https://open.spotify.com/embed/track/2EqlS6tkEnglzr7tkKAAYD?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-</div>
-</div>
-<div style="visibility:hidden" class="bottom-filler">
-	a
-</div>
-</div>
-</body>
-
+        <img src="/images/gallery/burned2.jpg">
+        		<p class="by">By: @luzerlmao
+        		<br><span style="opacity:0.5">"Is that my evil twin?!"</span></p>
+      	<img src="/images/gallery/vien_of_happiness_and_sunshine.jpg">
+        		<p class="by">By: @secoth
+        		<br><span style="opacity:0.5">"Think positive ❤️"</span></p>
+        <img src="/images/gallery/burned5.jpg">
+        		<p class="by">By: @guyam
+        		<br><span style="opacity:0.5">"If i throw this hat yo block done reference"</span></p>
+        <img src="/images/gallery/burned4.jpg">
+        		<p class="by">By: @parachio
+        		<br><span style="opacity:0.5">"Oh great i got into the sky day act!"</span></p>
+        <img src="/images/gallery/burned3.jpg">
+        		<p class="by">By: @basil_cat
+        		<br><span style="opacity:0.5">"Got crucified"</span></p>
+        <img src="images/gallery/burned1.jpg">
+        		<p class="by">By: @flowliketheguy
+        		<br><span style="opacity:0.5">"Awesome sauce..."</span></p>
+        <img src="images/gallery/catgod_club_set_1_20250910225156.png">
+        		<p class="by">By: @mungon_
+        		<br><span style="opacity:0.5">"I can feel the blue"</span></p>
+        </div>
+        <br>Reference of it <span style="opacity:0.5">(Outdated, im making a new one)</span><br>
+<br><img style="width:100%" src="images/gallery/ref.jpg">
+        		<p class="by">By: me
+        		<br><span style="opacity:0.5">"Type Error: Failed to Fetch"</span></p>
+        </details>
+        </div>
+        </div>
+    </body>
 </html>
