@@ -49,13 +49,14 @@
   z-index: -10;
   filter:grayscale(100%);
 pointer-events: none;
-opacity:0.15;
+opacity:0.1;
 position:fixed;
 z-index:-1;
 margin-left: auto;
 margin-right: auto;
 width:200%;
 }
+
 body {
 	background-color: black;
 	color:white;
@@ -374,9 +375,43 @@ backdrop-filter: blur(15px);
 #statuscafe-content {
     
 }
+.cover {
+	opacity: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	background:black;
+	animation: load 2s;
+}
+.cover img {
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 120px;
+    margin: auto;
+	
+}
+@keyframes load {
+	from {
+		opacity: 1;
+		scale: 1;
+		z-index: 10;
+	}
+	to {
+		opacity: 0;
+		scale: 2;
+		z-index: 10;
+	}
+}
     </style>
     </head>
     <body>
+    	<div class="cover">
+    		<img src="/images/logo-white.svg">
+    	</div>
 <img alt="trong dong dong son background" class="rotating" src="https://vuvien.nekoweb.org/trongdong2.png">
     	<div class="top-bar">
     		
@@ -455,7 +490,7 @@ function show() {
   dialog.showModal(); 
 }
         	</script>
-        	<img src="/images/icons/gb.png"><p>Sign my guestbook</p>
+        	<img src="/images/icons/gb.png"><p>Sign my guestbook <span style="opacity:0.5">please :&lt;</span></p>
         </div>
         <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
         <div class="box3">
@@ -526,6 +561,7 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
 	<br><a href="https://luzerlmao.carrd.co">Luzer • Carrd</a>
 	<br><a href="https://globalrook.straw.page/">Globalrook • Strawpage</a>
 	<br><a href="https://chriiiiiiiiiisop.carrd.co/">Chrisop • Carrd</a>
+    <br><a href="https://rentry.co/nowmeyuks">YuksMeNow • Rentry</a>
         </details>
         <details class="box1">
         	<summary>OC Gallery</summary>
