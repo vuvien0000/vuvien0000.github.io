@@ -69,6 +69,7 @@ body {
 }
 * {
 	font-family: spacemono;
+	font-size: 13px;
 }
 .wrap {
 	margin-left: auto;
@@ -111,8 +112,13 @@ word-break: break-all;
 	margin-block-start: 20px;
 	transition: 0.4s;
 }
+.socials-wrap {
+	width: 400px;
+	max-width: 90%;
+}
 .socials {
 	border: 2px solid rgba(0,0,0,0);
+	width: 100%;
 }
 a {
 	text-decoration: none;
@@ -135,9 +141,10 @@ margin-block: 20px;
 	border-block-start: 2px dashed rgba(255,255,255,0.25);
 }
 .box1 {
+	overflow: auto;
 	border-radius: 10px;
 	padding: 10px;
-	padding-block: 20px;
+	padding-block: 15px;
 	border: 2px solid rgba(255,255,255,0.1);
 	background-color: rgba(255,255,255,0.05);
     transition: 0.4s;
@@ -157,12 +164,13 @@ background-attachment: fixed;
 	background-color: rgba(57,219,143,0.1);
 }
 .box2 {
+	overflow: hidden;
 	border-radius: 10px;
 	padding: 10px;
 	border: 2px solid rgba(255,255,255,0.1);
 	background: rgba(255,255,255,0.05);
     transition: 0.4s;
-    height: 40px;
+    height: 32px;
     margin-block-end: 20px;
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
@@ -186,6 +194,7 @@ background-attachment: fixed;
 }
 
 .box3 {
+	overflow: auto;
 	border-radius: 10px;
 	padding: 10px;
 	border: 2px solid rgba(255,255,255,0.1);
@@ -204,10 +213,10 @@ background-attachment: fixed;
 	filter: invert(100%);
 }
 .box3 img {
-	height: 80px;
+	height: 65px;
 	position: relative;
 	float: left;
-	top: -8px;
+	top: -13px;
 	border-radius: 5px;
 	margin-inline: 10px;
 	margin-inline-end: 20px;
@@ -215,6 +224,7 @@ background-attachment: fixed;
     border-radius: 50px;
 }
 .box4 {
+	overflow: auto;
 	border-radius: 10px;
 	padding: 10px;
 	border: 2px solid rgba(255,255,255,0.1);
@@ -249,20 +259,21 @@ button:active {
 	scale:0.9;
 }
 .button2 {
+	width: 100%;
 	color:white;
-	font-size: 20px;
+	font-size: 13px;
 border-radius: 10px;
-	padding: 15px;
+	padding: 14px;
 	border: 2px solid rgba(255,255,255,0.1);
 	background: rgba(255,255,255,0.1);
     transition: 0.2s;
-    border-block-end: 7px solid rgba(255,255,255,0.1);
+    border-block-end: 5px solid rgba(255,255,255,0.1);
 }
 .button3 {
 	display: none;
 	width: 100%;
 	color:white;
-	font-size: 20px;
+	font-size: 15px;
 border-radius: 10px;
 	padding: 10px 15px;
 	border: 2px solid rgba(255,255,255,0.1);
@@ -313,7 +324,7 @@ border-radius: 10px;
 }
 .btn2 {
  font-family: spacemono;
- font-size:20px;
+ font-size:15px;
  background:rgba(255,255,255,0.1);
  padding: 14px 40px;
  color:white;
@@ -325,7 +336,8 @@ border-block-end: 7px solid rgba(255,255,255,0.1);
 .dialog {
 width:90%;
 max-width:800px;
-height:600px;
+height: 70%;
+max-height: 600px;
 background-color: rgba(0,0,0,25);
 border:2px solid rgba(255,255,255,0.25);
 border-radius:10px;box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px 5px, rgba(0, 0, 0, 1) 0px 1px 3px -1px;
@@ -442,10 +454,7 @@ backdrop-filter: blur(15px);
 <dialog id="dialog" class="dialog">
  
   <form method="dialog">
-	<h4 style="visibility:hidden">a</h4>
-
-    <button class="btn2" style="position:absolute;right:15px;top:15px;" type="submit">Close</button>
-    <h2 style="font-weight:normal;color:white;position:absolute;left:30px;top:0px">Guestbook</h2>
+    <button class="button2" type="submit">Close</button>
 <iframe src="https://vuvien.atabook.org/" width="100%" height="535px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
   </form>
 </dialog>
@@ -453,6 +462,7 @@ backdrop-filter: blur(15px);
 	<img class="logo" src="/images/logo-white.svg">
         	<h1>vuvien</h1>
         	<p>I like to make things, and so i'm learning how to.</p>
+        <div class="socials-wrap">
         <div class="socials">
         	<a href="https://discord.com/users/777798212743856128">
         	<img style="top:2px" src="images/icons2/dc.png">
@@ -471,6 +481,7 @@ backdrop-filter: blur(15px);
         </a>
         </div>
         </div>
+        </div>
         <hr>
         <div class="banner-box">
 <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
@@ -478,7 +489,7 @@ backdrop-filter: blur(15px);
         <details class="box1">
         	<summary>Who the heck is <strong>vuvien</strong> ??</summary>
 	<hr>
-	<p><span style="font-size:30px">Xin chào!! I'm <strong>Vien</strong></span>
+	<p><span style="font-size:30px">Xin chào!! I'm Vien</span>
 	<br><br>A random <a class="link" href="https://en.wikipedia.org/wiki/Vietnam">Vietnamese</a> & <a class="link" href="https://gender.fandom.com/wiki/Demigirl">demigirl</a> came from <a class="link" href="https://en.wikipedia.org/wiki/Ngh%E1%BB%87_An_province">Nghe An</a>, who spending alot of time on the internet doing random things. 
 	<br>Somehow, i'm being known for creating stuff on <a class="link" href="https://castle.xyz">castle.xyz</a>.It's a mobile platform for small games + built-in light weight game engine.
 	<br><br>A little bit more about myself:
@@ -511,7 +522,7 @@ function show() {
   dialog.showModal(); 
 }
         	</script>
-        	<img src="/images/icons/gb.png"><p>Sign my guestbook <span style="opacity:0.5">please :&lt;</span></p>
+        	<img src="/images/icons/gb.png"><p>Sign my guestbook</p>
         </div>
         <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
         <div class="box3">
@@ -553,7 +564,7 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
                     <span style="display:none" id="invitername"></span><span id="invitertag"></span>
                 </div>
                 <p style="position:relative;top:-10px" id="servername">Loading...</p>
-                <p style="margin:0;font-size:25px" id="counts">
+                <p style="margin-block-end:10px" id="counts">
                     <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span id="onlinecount">•••</span><span style="display:none" id="boostcount"></span>
                 </p>
                 <button class="button3">Join</button>
@@ -618,7 +629,7 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         		<br><span style="opacity:0.5">"I can feel the blue"</span></p>
         </div>
         <br>Reference of it <span id="ref" style="opacity:0.5">, outdated im lazy to make a new one ;-;</span><br>
-<br><img style="width:100%" src="images/gallery/ref.jpg">
+<br>Making a new one
         		<p class="by">By: me
         		<br><span style="opacity:0.5">"Type Error: Failed to Fetch"</span></p>
         </details>
