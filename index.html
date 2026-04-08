@@ -87,7 +87,7 @@ word-break: break-all;
 }
 .header p {
 	margin: 0;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 * {
 -webkit-tap-highlight-color: transparent;
@@ -151,8 +151,6 @@ margin-block: 15px;
 	background-color: rgba(255,255,255,0.05);
     transition: 0.4s;
     margin-block-end: 20px;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
 background: url("https://vuvien.nekoweb.org/images/tex.png");
 background-repeat: repeat;
 background-size: 500px;
@@ -174,8 +172,6 @@ background-attachment: fixed;
     transition: 0.4s;
     height: 32px;
     margin-block-end: 20px;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
 background: url("https://vuvien.nekoweb.org/images/tex.png");
 background-repeat: repeat;
 background-size: 500px;
@@ -203,8 +199,6 @@ background-attachment: fixed;
 	background: rgba(255,255,255,0.05);
     transition: 0.4s;
     margin-block-end: 20px;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
 background: url("https://vuvien.nekoweb.org/images/tex.png");
 background-repeat: repeat;
 background-size: 500px;
@@ -219,11 +213,16 @@ background-attachment: fixed;
 	position: relative;
 	float: left;
 	top: -13px;
-	border-radius: 5px;
-	margin-inline: 10px;
-	margin-inline-end: 20px;
+	margin: 0;
+	margin-inline-end: 10px;
 	border:2px solid rgba(255,255,255,0.1);
-    border-radius: 50px;
+    border-radius: 10px;
+}
+summary::marker { 
+	content: "✦ "; 
+}
+details[open] summary::marker {
+	content: "▲ ";
 }
 .box4 {
 	overflow: auto;
@@ -245,6 +244,10 @@ summary {
 }
 button:active {
 	scale:0.9;
+	background-color: white;
+	color:black;
+	border-block-end: 0px;
+	transform: translate(10px);
 }
 .button2 {
 	width: 100%;
@@ -360,7 +363,7 @@ backdrop-filter: blur(15px);
     border-radius: 5px;
 }
 #statuscafe-username {
-    
+    font-weight: bold;
 }
 #statuscafe-username a {
 	color:inherit;
@@ -373,8 +376,10 @@ backdrop-filter: blur(15px);
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	z-index: 10;
-	background:black;
+	z-index: 20;
+	background:rgba(0,0,0,0.5);
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(30px);
 }
 .cover img {
 	position: absolute;
@@ -565,12 +570,12 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         <br><br>Get your minecraft today!
         <br><br><a href="https://ncs.giganttech.net/random-video">
         <button class="button2">GET MINECRAFT</button></a>
-        <br><br><span style="opacity:0.5">DISCLAIMER: This is a joke</span>
+        <br><br><span style="opacity:0.25">DISCLAIMER: This is a joke</span>
         </details>
         <details class="box1">
         	<summary>Cool castlers that has a website</summary>
         	<hr>
-        	Still under update, adding more later<br>
+        	Ask me to get in<br>
         	<a href="https://wafelz.straw.page">Wafelz • Strawpage</a>
 	<br><a href="https://xarryberry.straw.page">Xarry (XarryBerry) • Strawpage</a>
 	<br><a href="https://luzerlmao.carrd.co">Luzer • Carrd</a>
@@ -579,15 +584,17 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
     <br><a href="https://rentry.co/nowmeyuks">YuksMeNow • Rentry</a>
         </details>
         <details class="box1">
-        	<summary>OC Gallery</summary>
-        <div class="notice">
-        	[!] Currently closed, i'm making some changes to my OC
-        </div>
-        <div style="display:none">
+        	<summary>Persona gallery</summary>
         <hr>
-        You're looking for the ref sheet? <br><a href="#ref"><button style="margin-block:15px" class="button2">Click here</button></a>
-        <br>My evil chud media showcase, credits under each image (i respect)<br>
-        <br><div class="gallery">
+        Reference <br><br>
+        	<img style="border:2px solid rgba(255,255,255,0.25);width:100%" src="https://vuvien.nekoweb.org/images/gallery/finalref.jpg">
+        		<p class="by">By: me
+        		<br><span style="opacity:0.5">"Simply just a shadow critter"</span></p>
+        <br>Media showcase, credits under each work (i respect)<br>
+        <div class="notice">
+        	[i] These were made before i tweaked my persona design
+        </div>
+        <div class="gallery">
         	<video controls>
         <source src="/images/gallery/lv_0_20260328130339.mp4">
         </video>
@@ -615,12 +622,13 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         		<p class="by">By: @mungon_
         		<br><span style="opacity:0.5">"I can feel the blue"</span></p>
         </div>
-        <br>Reference of it <span id="ref" style="opacity:0.5">, outdated im lazy to make a new one ;-;</span><br>
-<br>Making a new one
-        		<p class="by">By: me
-        		<br><span style="opacity:0.5">"Type Error: Failed to Fetch"</span></p>
-        </div>
         </details>
+        <div style="margin-left:auto;margin-right:auto;image-rendering:pixelated">
+        <img style="border:2px solid rgba(255,255,255,0.25)" src="/images/button.jpg">
+        <a href="https://wafelz.straw.page">
+        <img style="border:2px solid rgba(255,255,255,0.25)" src="/wafelz.gif">
+        </a>
+        </div>
         <p style="text-align:center">Thank you sm for visiting <span style="color:#00be91;font-size:20px">❤︎</span></p>
         </div>
         </div>
