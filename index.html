@@ -162,8 +162,8 @@ margin-block: 15px;
 	border-radius: 10px;
 	padding: 10px;
 	padding-block: 15px;
-	border: 2px solid rgba(255,255,255,0.1);
-	border-block-start: 4px solid rgba(255,255,255,0.075);
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
 	background-color: rgba(255,255,255,0.05);
     transition: 0.4s;
     margin-block-end: 20px;
@@ -183,8 +183,8 @@ background-attachment: fixed;
 	overflow: hidden;
 	border-radius: 10px;
 	padding: 10px;
-	border: 2px solid rgba(255,255,255,0.1);
-	border-block-start: 4px solid rgba(255,255,255,0.075);
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
 	background: rgba(255,255,255,0.05);
     transition: 0.4s;
     height: 32px;
@@ -212,8 +212,8 @@ background-attachment: fixed;
 	overflow: auto;
 	border-radius: 10px;
 	padding: 10px;
-	border: 2px solid rgba(255,255,255,0.1);
-	border-block-start: 4px solid rgba(255,255,255,0.075);
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
 	background: rgba(255,255,255,0.05);
     transition: 0.4s;
     margin-block-end: 20px;
@@ -233,7 +233,7 @@ background-attachment: fixed;
 	top: -13px;
 	margin: 0;
 	margin-inline-end: 10px;
-	border:2px solid rgba(255,255,255,0.1);
+	border:2px solid rgba(255,255,255,0.25);
     border-radius: 10px;
 }
 summary::marker { 
@@ -246,8 +246,8 @@ details[open] summary::marker {
 	overflow: auto;
 	border-radius: 10px;
 	padding: 10px;
-	border: 2px solid rgba(255,255,255,0.1);
-	border-block-start: 4px solid rgba(255,255,255,0.075);
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
 	background-color: rgba(255,255,255,0.05);
     transition: 0.4s;
     margin-block-end: 20px;
@@ -274,18 +274,18 @@ button:active {
 	font-size: 10px;
 border-radius: 10px;
 	padding: 10px;
-	border: 2px solid rgba(255,255,255,0.1);
+	border: 2px solid rgba(255,255,255,0.25);
 	background-color: rgba(255,255,255,0.1);
-	border-block-end: 4px solid rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
     transition: 0.2s;
     }
 .button2 {
 	width: 100%;
 	color:white;
 	font-size: 13px;
-border-radius: 10px;border: 2px solid rgba(255,255,255,0.1);
+border-radius: 10px;border: 2px solid rgba(255,255,255,0.25);
 	background-color: rgba(255,255,255,0.1);
-	border-block-end: 4px solid rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
 	padding: 14px;
     transition: 0.2s;
 }
@@ -295,9 +295,9 @@ border-radius: 10px;border: 2px solid rgba(255,255,255,0.1);
 	font-size: 15px;
 border-radius: 10px;
 	padding: 10px 15px;
-	border: 2px solid rgba(255,255,255,0.1);
+	border: 2px solid rgba(255,255,255,0.25);
 	background-color: rgba(255,255,255,0.1);
-	border-block-end: 4px solid rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
     transition: 0.2s;
 }
 .gamebox {
@@ -442,6 +442,75 @@ backdrop-filter: blur(30px);
 	width: 100%;
 	height: 7px;
 	background: linear-gradient(to right,#7f7f7f,#c4c4c4,#fdadc8,#ffffff,#fdadc8,#c4c4c4,#7f7f7f)
+}
+.snug-ring {
+	height: 31px;
+	display: flex;
+	align-content: center;
+	float: right;
+}
+.snug-ring.button {
+	width: 31px;
+border: 2px solid orange;
+}
+.snug-ring.label {
+	width: 88px;
+border: 2px solid orange;
+}
+.snug-ring.label p {
+	color:orange;
+	position: relative;
+	top:-6px;
+	left:8px;
+}
+.snug-ring.button p {
+	color:orange;
+	position: relative;
+	top:-6px;
+	left:8px;
+}
+.snug-ring-box {
+	height: 40px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-radius: 10px;
+	padding: 10px;
+	padding-block: 15px;
+    transition: 0.4s;
+    margin-block-end: 20px;
+}
+.snug-ring-box-button {
+	position: relative;
+	float: right;
+right: 5px;
+}
+.snug-ring-box-button-navigate {
+margin-inline: 2px;
+	color:white;
+	font-size: 10px;
+border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
+}
+.snug-ring-box-label {
+	float: left;
+	margin-inline-start: 5px;
+}
+.snug-ring-box-label.icon {
+	position: relative;
+	top:3px;
+	width: 35px;
+	height: 35px;
+	float: left;
+	rotate: 27deg;
+}
+.snug-ring-box-label p {
+	color:white;
+	margin-block-start: 11px;
+	margin-inline-start: 15px;
+	float: right;
 }
     </style>
     </head>
@@ -612,6 +681,22 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         <p>• Cool websites
         <br><span style="opacity:0.5">Adding soon</span></p>
         </details>
+        <div class="snug-ring-box">
+        	<a href="https://snugnook.org/ring">
+        	<div class="snug-ring-box-label">
+        		<img class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/neofax.png">
+        	<p>Snug Ring</p>
+        	</div>
+        	</a>
+        	<div class="snug-ring-box-button">
+        		<a href="https://snugnook.org/ring?action=previous">
+        		<button class="snug-ring-box-button-navigate">Prev</button>
+        		</a>
+<a href="https://snugnook.org/ring?action=random">
+	<button class="snug-ring-box-button-navigate">Random</button></a>
+        		<a href="https://snugnook.org/ring?action=next"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
         <details style="display:none" class="box1">
         	<summary>OC/Persona gallery</summary>
         <hr>
@@ -657,6 +742,11 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         <a href="https://wafelz.straw.page">
         <img style="border:2px solid rgba(255,255,255,0.25)" src="/wafelz.gif">
         </a>
+        <!-- webring widget 1 -->
+        <div style="display:none" class="snug-ring">
+        	<div class="snug-ring button"><p>&lt;-</p></div><div class="snug-ring label"><p>Snug ring</p></div><div class="snug-ring button"><p>-></p></div>
+        </div>
+
         </div>
         <p style="text-align:center">Thank you sm for visiting <span style="color:#00be91;font-size:20px">❤︎</span></p>
         </div>
