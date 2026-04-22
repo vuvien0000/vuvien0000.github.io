@@ -157,6 +157,11 @@ margin-block: 15px;
 	border:none;
 	border-block-start: 2px dashed rgba(255,255,255,0.25);
 }
+.hr2 {
+margin-block: 5px;
+	border:none;
+	border-block-start: 2px dashed rgba(255,255,255,0.25);
+}
 .box1 {
 	overflow: auto;
 	border-radius: 10px;
@@ -299,6 +304,17 @@ border-radius: 10px;
 	background-color: rgba(255,255,255,0.1);
 	border-block-end: 4px solid rgba(255,255,255,0.25);
     transition: 0.2s;
+    margin-inline: 10px;
+}
+.button5 {
+	color:white;
+	font-size: 15px;
+border-radius: 10px;
+	padding: 10px 15px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
 }
 .gamebox {
 	width: 90%
@@ -387,7 +403,7 @@ backdrop-filter: blur(15px);
 	color:inherit;
 }
 #statuscafe-content {
-    text-shadow: 0px 0px 5px black;
+
 }
 .cover {
 	opacity: 1;
@@ -512,6 +528,11 @@ border-radius: 10px;
 	margin-inline-start: 15px;
 	float: right;
 }
+.banner-box p {
+	margin: 0;
+	margin-inline-start: 1px;
+	margin-block-start: 9px;
+}
     </style>
     </head>
     <body onload="load()">
@@ -568,8 +589,38 @@ border-radius: 10px;
         </div>
         <hr>
         <div class="banner-box">
-<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
+<script>
+// music player script
+    const song =
+    document.getElementById('song');
+
+function press() {
+if (document.getElementById("song").paused == true) {
+    document.getElementById("song").play();
+    document.getElementById("play-button").innerHTML =
+      "❚❚";
+  } else if (document.getElementById("song").paused == false) {
+   document.getElementById("song").pause();
+   document.getElementById("play-button").innerHTML =
+      "▶";
+  }
+}
+setInterval(() => {
+  const progressBar = audioPlayer.querySelector(".progress");
+  progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
+  audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(
+    audio.currentTime
+  );
+}, 500);
+</script>
+<audio src="/solitude.mp3" id="song"></audio>
+<div id="statuscafe">
+	<div id="statuscafe-username"></div><div id="statuscafe-content"></div><script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
+        	<hr class="hr2">
+        	<p onclick="press()"><span style="position:relative;top:-15px;"><span id="play-button">▶︎</span> Block Tales - Solitude</span> <a href="https://block-tales.fandom.com/wiki/Solitude"><img style="margin-inline-end:2px;width:40px;height:40px;border-radius:3px" src="/images/album.webp"></a></p>
         </div>
+        </div>
+
         <details class="box1">
         	<summary>Who the heck is <strong>vuvien</strong> ??</summary>
 	<hr>
@@ -608,7 +659,6 @@ function show() {
         	</script>
         	<img src="/images/icons/gb.png"><p>Sign my guestbook</p>
         </div>
-        <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
         <div class="box3">
 <script>
 // thank you duducat/ducdat0507
@@ -651,11 +701,26 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
                 <p style="margin-block-end:10px" id="counts">
                     <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span id="onlinecount">•••</span><span style="display:none" id="boostcount"></span>
                 </p>
-    <button class="button3">Join</button>
+<script>
+function send() {
+	alert("🔔 BEEP received!");
+fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S3fW22ldREAY1z0sAJgwIrFP8KE-YsZG_y_fqml9LxcYc4w6Q", {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    content: "BEEP <@&1496096484477894817>"
+  })
+});
+}
+</script>
+<span style="float:right">
+        <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
+    <button class="button5">Join server</button></a>
+    <button onclick="send()" class="button5">Send BEEP</button>
+    </span>
 </div>
         </div>
         </div>
-        </a>
         <details class="box1">
         	<summary>Free minecraft!</summary>
         	<hr>
@@ -681,23 +746,7 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         <p>• Cool websites
         <br><span style="opacity:0.5">Adding soon</span></p>
         </details>
-        <div class="snug-ring-box">
-        	<a href="https://snugnook.org/ring">
-        	<div class="snug-ring-box-label">
-        		<img class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/neofax.png">
-        	<p>Snug Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://snugnook.org/ring?action=previous">
-        		<button class="snug-ring-box-button-navigate">Prev</button>
-        		</a>
-<a href="https://snugnook.org/ring?action=random">
-	<button class="snug-ring-box-button-navigate">Random</button></a>
-        		<a href="https://snugnook.org/ring?action=next"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
-        </div>
-        <details style="display:none" class="box1">
+        <details class="box1">
         	<summary>OC/Persona gallery</summary>
         <hr>
         <span style="position:relative;top:10px">Reference:</span><a download href="/images/gallery/aref.jpg"><button class="button-mini" style="float:right">Download ref image</button></a><br>
@@ -737,20 +786,40 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         		<br><span style="opacity:0.5">"I can feel the blue"</span></p>
         </div>
         </details>
+
+        <!-- webring widget 1 -->
+        <div style="display:none" class="snug-ring">
+        	<div class="snug-ring button"><p>&lt;-</p></div><div class="snug-ring label"><p>Snug ring</p></div><div class="snug-ring button"><p>-></p></div>
+        </div>
+<!-- webring widget final -->
+        <div class="snug-ring-box">
+        	<a href="https://snugnook.org/ring">
+        	<div class="snug-ring-box-label">
+        		<img class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/neofax.png">
+        	<p>Snug Ring</p>
+        	</div>
+        	</a>
+        	<div class="snug-ring-box-button">
+        		<a href="https://snugnook.org/ring?action=previous">
+        		<button class="snug-ring-box-button-navigate">Prev</button>
+        		</a>
+<a href="https://snugnook.org/ring?action=random">
+	<button class="snug-ring-box-button-navigate">Random</button></a>
+        		<a href="https://snugnook.org/ring?action=next"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
         <div style="margin-left:auto;margin-right:auto;image-rendering:pixelated">
         <img style="border:2px solid rgba(255,255,255,0.25)" src="/images/button.jpg">
         <a href="https://wafelz.straw.page">
         <img style="border:2px solid rgba(255,255,255,0.25)" src="/wafelz.gif">
         </a>
-        <!-- webring widget 1 -->
-        <div style="display:none" class="snug-ring">
-        	<div class="snug-ring button"><p>&lt;-</p></div><div class="snug-ring label"><p>Snug ring</p></div><div class="snug-ring button"><p>-></p></div>
-        </div>
-
         </div>
         <p style="text-align:center">Thank you sm for visiting <span style="color:#00be91;font-size:20px">❤︎</span></p>
         </div>
         </div>
+        </div>
+        <div style="height:100px">
+        	
         </div>
     </body>
 </html>
