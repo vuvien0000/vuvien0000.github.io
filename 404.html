@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>404</title>
+   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="en" />
+   <link rel="icon" type="image/x-icon" href="/images/logo-white.svg">
+<meta name="theme-color" content="black" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+@font-face {
+	font-family: spacemono;
+	src: url('/spacemono-regular.ttf')
+}
+body {
+	margin: 0;
+	padding: 20px;
+}
+* {
+	font-family: spacemono;
+}
+.header {
+	margin-left: auto;
+	margin-right: auto;
+display: block;
+}
+.header h1 {
+	font-weight: normal;
+	font-size: 30px;
+	margin: 0;
+word-break: break-all;
+}
+.logo {
+	width: 50px;
+    pointer-events: none;
+    filter:invert(100%);
+    margin-block-end: 10px;
+}
+.logo2 {
+	width: 50px;
+    pointer-events: none;
+    filter:invert(100%);
+    margin-block-end: 10px;
+}
+.oc {
+	width:50%;
+	max-width: 200px;
+	pointer-events: none;
+}
+@media screen and (width <= 600px) {
+	.content h1 {
+		text-align: center;
+		line-height: 10px;
+	}
+	.content p {
+		text-align: center;
+		opacity: 0.5;
+	}
+	.oc {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.logo {
+margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.logo2 {
+		display: none;
+	}
+	button {
+		width: 100%;
+	}
+}
+@media screen and (width >= 600px) {
+	.wrap {
+		max-width:600px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-block-start: 30px;
+	}
+	.content {
+		position: relative;
+		top: 0;
+		float: right;
+		width: 300px;
+		border:2px solid rgba(0,0,0,0);
+	}
+	.content h1 {
+		text-align: right;
+		font-size: 70px;
+		line-height: 10px;
+	}
+	.content p {
+		text-align: right;
+		opacity: 0.7;
+	}
+	.logo {
+		display: none;
+	}
+	.logo2 {
+		float: right;
+	}
+	button {
+		float: right;
+	}
+}
+button {
+	font-size: 15px;
+border-radius: 10px;
+	padding: 10px 15px;
+	border: 2px solid rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0.05);
+	border-block-end: 4px solid rgba(0,0,0,0.25);
+    transition: 0.2s;
+}
+button:active {
+	scale:0.9;
+	background-color: black;
+	color:white;
+	border-block-end: 0px;
+	transform: translate(10px);
+}
+    </style>
+    <body>
+    	<div class="wrap">
+	<img class="logo" src="/images/logo-white.svg">
+        	<img class="oc" src="/images/1000036043.png">
+        	<div class="content">
+        			<img class="logo2" src="/images/logo-white.svg">
+    	<h1>404</h1>
+    	<p>The destination page doesn't exist...</p>
+    	<a href="/index">
+    	<button>Back to home</button>
+    	</a>
+    	</div>
+    	</div>
+    </body>
+    </html>
