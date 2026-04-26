@@ -229,7 +229,6 @@ background-attachment: fixed;
 }
 .box3:active {
 	color:#39db90;
-	filter: invert(100%);
 }
 .box3 img {
 	height: 65px;
@@ -699,7 +698,7 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
                 </div>
                 <p style="position:relative;top:-10px" id="servername">Loading...</p>
                 <p style="margin-block-end:10px" id="counts">
-                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span id="onlinecount">•••</span><span style="display:none" id="boostcount"></span>
+                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#39db90" id="onlinecount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#ff7af8" id="boostcount">•••</span>
                 </p>
 <script>
 function send() {
@@ -712,6 +711,13 @@ fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S
   })
 });
 }
+
+const dialog2 = document.getElementById("dialog2"); 
+
+function show2() { 
+  dialog2.showModal(); 
+}
+
 </script>
 <span style="float:right">
         <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
@@ -800,12 +806,12 @@ fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S
         	</div>
         	</a>
         	<div class="snug-ring-box-button">
-        		<a href="https://snugnook.org/ring?action=previous">
+        		<a href="https://snugnook.org/ring/vuvien.xyz/previous">
         		<button class="snug-ring-box-button-navigate">Prev</button>
         		</a>
-<a href="https://snugnook.org/ring?action=random">
+<a href="https://snugnook.org/ring/random">
 	<button class="snug-ring-box-button-navigate">Random</button></a>
-        		<a href="https://snugnook.org/ring?action=next"><button class="snug-ring-box-button-navigate">Next</button></a>
+        		<a href="https://snugnook.org/ring/vuvien.xyz/next"><button class="snug-ring-box-button-navigate">Next</button></a>
         	</div>
         </div>
         <div style="margin-left:auto;margin-right:auto;image-rendering:pixelated">
