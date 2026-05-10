@@ -12,51 +12,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <style>
-@-webkit-keyframes rotating /* rotating background */ {
-  from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.rotating {
-  -webkit-animation: rotating 30s linear infinite;
-  -moz-animation: rotating 30s linear infinite;
-  -ms-animation: rotating 30s linear infinite;
-  -o-animation: rotating 30s linear infinite;
-  animation: rotating 30s linear infinite;
-  z-index: -10;
-  filter:grayscale(100%);
-pointer-events: none;
-opacity:0.05;
-position:fixed;
-z-index:-1;
-margin-left: auto;
-margin-right: auto;
-width:200%;
-}
-
 body {
 	color:white;
 	padding: 0;
@@ -70,6 +25,10 @@ background:url('/images/flowers.jpeg');
 	font-family: spacemono;
 	src: url('/spacemono-regular.ttf')
 }
+@font-face {
+	font-family: rm-mono;
+	src: url('/RMMono-Light.ttf')
+}
 * {
 	font-family: spacemono;
 	font-size: 13px;
@@ -77,22 +36,77 @@ background:url('/images/flowers.jpeg');
 .wrap {
 	margin-left: auto;
 	margin-right:auto;
-	max-width: 500px;
 }
 .wrap-two {
 margin-left: auto;
 	margin-right:auto;
-	max-width: 575px;
 border-radius: 0px 0px 20px 20px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-background: url("https://vuvien.nekoweb.org/images/tex.png");
-background-repeat: repeat;
-background-size: 300px;
-background-color: rgba(0,0,0,0.5);
+
+background-color: rgba(0,0,0,0.25);
+box-shadow: 0px 0px 0px 3px rgba(255,255,255,0.5);
 }
+@media screen and (width >= 700px) {
+	.wrap {
+max-width: 1000px;
+	}
+	.wrap-two {
+		max-width: 800px;
+	}
 .padding {
-padding: 27px;
+padding: 55px;
+}
+.header-part {
+	display: flex;
+	justify-content: center;
+}
+.banner-box {
+	width: 250px;
+}
+.content-part {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.box1 {
+	margin-inline: 10px;
+	width: 300px;
+	max-height: 20px;
+}
+details[open] {
+	max-height: 300px;
+	width: 100%;
+}
+.box2 {
+	margin-inline: 10px;
+	max-height: 30px;
+}
+.box3 {
+	margin-inline: 10px;
+	width: 70%;
+}
+.box4 {
+	margin-inline: 10px;
+}
+.snug-ring-box {
+	width: 70%;
+}
+}
+@media screen and (width < 700px) {
+	.wrap {
+		max-width: 500px;
+	}
+	.wrap-two {
+		max-width: 600px;
+	}
+.padding {
+padding: 35px;
+}
+}
+.gallery-wrapper {
+	display: flex;
+	flex-wrap: wrap;
 }
 .header h1 {
 	font-weight: normal;
@@ -122,6 +136,660 @@ word-break: break-all;
     margin-inline-end: 5px;
 }
 .socials img {
+	margin-inline: 5px;
+	position: relative;
+	width:40px;
+	margin-block-start: 20px;
+	transition: 0.4s;
+}
+.socials-wrap {
+	width: 400px;
+	max-width: 90%;
+}
+.socials {
+	border: 2px solid rgba(0,0,0,0);
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	transition: 0.3s;
+color:#39db90;
+}
+.link:hover {
+	font-size: 20px;
+	font-weight: bold;
+}
+.socials img:hover {
+	width: 50px;
+	filter: drop-shadow(4px,4px,5px,white);
+}
+.socials img:active {
+	opacity: 0.5;
+}
+hr {
+margin-block: 15px;
+	border:none;
+	border-block-start: 2px dashed rgba(255,255,255,0.25);
+}
+.hr2 {
+margin-block: 5px;
+	border:none;
+	border-block-start: 2px dashed rgba(255,255,255,0.25);
+}
+.box1 {
+	overflow: auto;
+	border-radius: 10px;
+	padding: 10px;
+	padding-block: 15px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+}
+.box1 img {
+	border-radius: 7px;
+}
+.box1:hover {
+	background-color: rgba(57,219,143,0.1);
+}
+.box2 {
+	overflow: hidden;
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    height: 32px;
+    margin-block-end: 20px;
+
+}
+.box2 img {
+	height:70%;
+	float: left;
+	margin: 5px;
+}
+.box2 p {
+	margin: 7px;
+	margin-inline-start: 50px;
+}
+.box2:hover {
+	background-color: rgba(57,219,143,0.1);
+}
+
+.box3 {
+	overflow: auto;
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
+	background: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+}
+.box3:active {
+	color:#39db90;
+}
+.box3 img {
+	height: 65px;
+	position: relative;
+	float: left;
+	top: -13px;
+	margin: 0;
+	margin-inline-end: 10px;
+	border:2px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+summary::marker { 
+	content: "✦ "; 
+}
+details[open] summary::marker {
+	content: "▲ ";
+}
+details[open] {
+	
+}
+.box4 {
+	overflow: auto;
+	border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-block-start: 4px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.05);
+    transition: 0.4s;
+    margin-block-end: 20px;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.discord {
+	width: 90%;
+	position: relative;
+}
+summary {
+	margin-inline-start: 10px;
+}
+button:active {
+	scale:0.9;
+	background-color: white;
+	color:black;
+	border-block-end: 0px;
+	transform: translate(10px);
+}
+.button-mini {
+	margin-block-end: 12px;
+	color:white;
+	font-size: 10px;
+border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
+    }
+.button2 {
+	width: 100%;
+	color:white;
+	font-size: 13px;
+border-radius: 10px;border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+	padding: 14px;
+    transition: 0.2s;
+}
+.button3 {
+	width: 100%;
+	color:white;
+	font-size: 15px;
+border-radius: 10px;
+	padding: 10px 15px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
+    margin-inline: 10px;
+}
+.button5 {
+	color:white;
+	font-size: 15px;
+border-radius: 10px;
+	padding: 10px 15px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
+}
+.gamebox {
+	width: 90%
+	margin-left: auto;
+	margin-right: auto;
+}
+.gallery img {
+	height: 200px;
+	margin: 5px;
+}
+.gallery video {
+margin: 5px;
+	height:200px;
+	border-radius: 9px;
+	border:2px solid rgba(255,255,255,0.25);
+}
+.by {
+	border-radius: 7px;
+	border:2px dashed rgba(255,255,255,0.25);
+	padding: 10px;
+	margin-block: 10px;
+	background: rgba(255,255,255,0.1);
+}
+.btn2 {
+ font-family: spacemono;
+ font-size:15px;
+ background:rgba(255,255,255,0.1);
+ padding: 14px 40px;
+ color:white;
+ border-radius: 7px;
+ border: 2px solid rgba(255,255,255,0.1);
+border-block-end: 7px solid rgba(255,255,255,0.1);
+ transition: 0.4s;
+}
+.dialog {
+width:90%;
+max-width:550px;
+height: 70%;
+max-height: 600px;
+background-color: rgba(0,0,0,25);
+border:2px solid rgba(255,255,255,0.25);
+border-radius:10px;box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px 5px, rgba(0, 0, 0, 1) 0px 1px 3px -1px;
+overflow:hidden;
+animation: open 0.4s;
+background: url("https://vuvien.nekoweb.org/images/tex.png");
+background-repeat: repeat;
+background-size: 500px;
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+}
+@keyframes open {
+	from {
+		opacity: 0;
+		scale: 0.9;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
+	}
+}
+.banner-box {
+	position: relative;
+	height: 150px;
+	border-radius: 10px;
+	padding: 10px;
+	background: rgba(255,255,255,0.05);
+    background-image: url('https://i.pinimg.com/originals/1a/19/b8/1a19b805fd96a60d9582ca175519a6cd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-block-end: 20px;
+}
+#statuscafe {
+	position: absolute;
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+    color:white;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 9px;
+    border-radius: 5px;
+}
+#statuscafe-username {
+    font-weight: bold;
+}
+#statuscafe-username a {
+	color:inherit;
+}
+#statuscafe-content {
+
+}
+.cover {
+	opacity: 1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	background:rgba(0,0,0,0.5);
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(30px);
+}
+.cover img {
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 120px;
+    margin: auto;
+	pointer-events: none;
+}
+.cover p {
+	text-align: center;
+	margin-block: 80px;
+	color:yellow;
+}
+@keyframes load {
+	from {
+		opacity: 1;
+		scale: 1;
+		z-index: 10;
+	}
+	to {
+		opacity: 0;
+		scale: 2;
+		z-index: 10;
+	}
+}
+.notice {
+	color:yellow;
+	border-radius: 7px;
+	border:2px dashed rgba(255,255,0,0.25);
+	padding: 10px;
+	margin-block: 10px;
+	background: rgba(255,255,0,0.1);
+}
+.top-bar {
+	z-index: 10;
+	position: relative;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 7px;
+	background: linear-gradient(to right,#7f7f7f,#c4c4c4,#fdadc8,#ffffff,#fdadc8,#c4c4c4,#7f7f7f)
+}
+
+.snug-ring-box {
+	height: 40px;
+	border: 2px solid rgba(255,255,255,0.25);
+	border-radius: 10px;
+	padding: 10px;
+	padding-block: 15px;
+    transition: 0.4s;
+    margin-block-end: 20px;
+}
+.snug-ring-box-button {
+	position: relative;
+	float: right;
+right: 5px;
+}
+.snug-ring-box-button-navigate {
+margin-inline: 2px;
+	color:white;
+	font-size: 10px;
+border-radius: 10px;
+	padding: 10px;
+	border: 2px solid rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.1);
+	border-block-end: 4px solid rgba(255,255,255,0.25);
+    transition: 0.2s;
+}
+.snug-ring-box-label {
+	float: left;
+	margin-inline-start: 5px;
+}
+.snug-ring-box-label.icon {
+	position: relative;
+	top:3px;
+	width: 35px;
+	height: 35px;
+	float: left;
+	rotate: 27deg;
+}
+.snug-ring-box-label p {
+	color:white;
+	margin-block-start: 11px;
+	margin-inline-start: 15px;
+	float: right;
+}
+.banner-box p {
+	margin: 0;
+	margin-inline-start: 1px;
+	margin-block-start: 9px;
+}
+.bg-video {
+	position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+    </style>
+    </head>
+        <body onload="load()">
+    	<script>
+    		function load() {
+    			const cover = document.getElementById("cover");
+    			cover.style.animation = "load 2s" ;
+    			cover.style.opacity = 0 ;
+    			cover.style.zIndex = -10 ;
+    		}
+    	</script>
+    	<div id="cover" class="cover">
+    			<div class="dot">
+    				
+    			</div>
+    		<img src="/images/logo-white.svg">
+    		<noscript><p>[!] Please turn on JavaScript</p></noscript>
+    	</div>
+    		
+    		<div class="wrap-two">
+    			<div class="top-bar"></div>
+    	<div class="padding">
+    	<div class="wrap">
+<dialog id="dialog" class="dialog">
+ 
+  <form method="dialog">
+    <button style="" class="button2" type="submit">Close</button>
+<iframe style="border-radius:7px" src="https://vuvien.atabook.org/" width="100%" height="535px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+  </form>
+</dialog>
+<!-- header part -->
+<div class="header-part">
+        <div class="header">
+	<img class="logo" src="/images/logo-white.svg">
+        	<h1>vuvien</h1>
+        	<p>I like to make things, and so i'm learning how to.</p>
+        <div class="socials-wrap">
+        <div class="socials">
+        	<a href="https://discord.com/users/777798212743856128">
+        	<img style="top:2px" src="images/icons2/dc.png">
+        </a>
+        	<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI">
+        	<img src="images/icons2/tt.png">
+        </a>
+        	<a href="https://castle.xyz/@that_new_emoji__">
+        	<img src="images/icons2/cc.png">
+        </a>
+        	<a href="https://github.com/vuvien0000">
+        	<img src="images/icons2/gh.png">
+        </a>
+        	<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847">
+        	<img src="images/icons2/rb.png">
+        </a>
+        </div>
+        </div>
+        </div>
+        <hr>
+        <div class="banner-box">
+<div id="statuscafe">
+	<div id="statuscafe-username"></div><div id="statuscafe-content"></div><script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
+        </div>
+        </div>
+</div>
+<!-- end header part -->
+
+<!-- content part -->
+<div class="content-part">
+	        <div onclick="show()" class="box2">
+        	<script>
+const dialog = document.getElementById("dialog"); 
+
+function show() { 
+  dialog.showModal(); 
+}
+        	</script>
+        	<img src="/images/icons/gb.png"><p>Sign my guestbook</p>
+        </div>
+        <details class="box1">
+        	<summary>Who the heck is <strong>vuvien</strong> ??</summary>
+	<hr>
+	<p><span style="font-size:30px">Xin chào!! I'm Vien</span>
+	<br><br>A random <a class="link" href="https://en.wikipedia.org/wiki/Vietnam">Vietnamese</a> & <a class="link" href="https://gender.fandom.com/wiki/Demigirl">demigirl</a> came from <a class="link" href="https://en.wikipedia.org/wiki/Ngh%E1%BB%87_An_province">Nghe An</a>, who spending alot of time on the internet doing random things. 
+	<br>Somehow, i'm being known for creating stuff on <a class="link" href="https://castle.xyz">castle.xyz</a>.It's a mobile platform for small games + built-in light weight game engine.
+	<br><br>A little bit more about myself:
+	<br>My name is Hoan Vien, but please call me vuvien/vien !
+	<br>I'm young.
+	<br>Struggling with JavaScript ALOT u_u 
+	<br>In my free time, i do random things on the net or just go outside searching for fresh air.
+	<br>I'm NOT a dev, designer, animator, artist bla bla bla...
+        <br><br>Games i like<br>
+        <span style="opacity:0.5">These are the best!</span><br><br>
+<span class="gamebox">
+<img style="width:100px;height:auto" class="game" src="/images/g1.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g5.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g8.jpeg">
+<img style="width:100px;height:auto" class="game" src="/images/g3.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g4.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g7.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g2.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g6.jpg">
+</span>
+<br><br>
+My email: <a href="mailto:vuvien1000@gmail.com">vuvien1000@gmail.com</a>
+</p>
+        </details>
+
+        <details class="box1">
+        	<summary>Free minecraft!</summary>
+        	<hr>
+        	FREE MINECRAFT WORKING 2067!!! 
+        	CLAIM NOW BEFORE YOU GET A LOW TAPER FADE!!!
+        <br>(gone sexual)
+        <br><br>Get your minecraft today!
+        <br><br><a href="https://ncs.giganttech.net/random-video">
+        <button class="button2">GET MINECRAFT</button></a>
+        <br><br><span style="opacity:0.25">DISCLAIMER: This is a joke</span>
+        </details>
+        <div class="box3">
+<script>
+// thank you duducat/ducdat0507
+let params = new URLSearchParams("?invite=GNQ2CUYyYp");
+            let invite = params.get("invite");
+            let style = params.get("style");
+            
+            fetch("https://discord.com/api/v9/invites/" + invite + "?with_counts=true")
+                .then(res => res.json())
+                .then((out) => {
+                    if (out.guild.banner) banner.style.backgroundImage = "url(https://cdn.discordapp.com/banners/" + out.guild.id + "/" + out.guild.banner + "?size=" + Math.max(screen.width, screen.height) + ")";
+                    icon.src = "https://cdn.discordapp.com/icons/" + out.guild.id + "/" + out.guild.icon;
+
+                    invitername.innerText = out.inviter.username;
+                    invitertag.innerText = out.inviter.discriminator;
+
+                    servername.innerText = out.guild.name;
+
+                    membercount.innerText = (+out.approximate_member_count).toLocaleString("en-US");
+                    onlinecount.innerText = (+out.approximate_presence_count).toLocaleString("en-US");
+                    boostcount.innerText = (+out.guild.premium_subscription_count).toLocaleString("en-US");
+                
+
+                }
+            )
+</script>
+        <div id="upper">
+            <div style="display:none" id="banner"></div>
+        </div>
+        <div id="lower">
+<div id="iconframe">
+
+<img id="icon">
+            </div>
+            <div id="dataframe">
+                <div style="display:none" id="inviter">
+                    <span style="display:none" id="invitername"></span><span id="invitertag"></span>
+                </div>
+                <p style="position:relative;top:-10px" id="servername">Loading...</p>
+                <p style="margin-block-end:10px" id="counts">
+                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#39db90" id="onlinecount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#ff7af8" id="boostcount">•••</span>
+                </p>
+<script>
+function send() {
+	alert("🔔 BEEP received!");
+fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S3fW22ldREAY1z0sAJgwIrFP8KE-YsZG_y_fqml9LxcYc4w6Q", {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    content: "BEEP <@&1496096484477894817>"
+  })
+});
+}
+
+const dialog2 = document.getElementById("dialog2"); 
+
+function show2() { 
+  dialog2.showModal(); 
+}
+
+</script>
+<span style="float:right">
+        <a style="color:white" href="https://discord.gg/GNQ2CUYyYp">
+    <button class="button5">Join server</button></a>
+    <button onclick="send()" class="button5">Send BEEP</button>
+    </span>
+</div>
+        </div>
+        </div>
+
+        <details class="box1">
+        	<summary>See more websites</summary>
+        	<hr>
+        	<p>• Castle people</p>
+        	<a href="https://wafelz.straw.page">Wafelz • Strawpage</a>
+        	<br><a href="https://xgs.straw.page">X game studios • Strawpage</a>
+	<br><a href="https://xarryberry.straw.page">Xarry (XarryBerry) • Strawpage</a>
+	<br><a href="https://luzerlmao.carrd.co">Luzer • Carrd</a>
+	<br><a href="https://globalrook.straw.page/">Globalrook • Strawpage</a>
+	<br><a href="https://chriiiiiiiiiisop.carrd.co/">Chrisop • Carrd</a>
+    <br><a href="https://rentry.co/nowmeyuks">YuksMeNow • Rentry</a>
+        <p>• Cool websites
+        <br><span style="opacity:0.5">Adding soon</span></p>
+        </details>
+        <details class="box1">
+        	<summary>OC/Persona gallery</summary>
+        <hr>
+        <span style="position:relative;top:10px">Reference:</span><a download href="/images/gallery/aref.jpg"><button class="button-mini" style="float:right">Download ref image</button></a><br>
+        	<div class="gallery-wrapper">
+        	<img style="margin-block-start:35px;height:200px" src="https://vuvien.nekoweb.org/images/gallery/aref.jpg">
+</div>
+        <div class="notice">
+        	[i] These were made before i tweaked my persona design
+        </div>
+        <div class="gallery">
+        	<div class="gallery-wrapper">
+        	<video controls>
+        <source src="/images/gallery/lv_0_20260328130339.mp4">
+        </video>
+        <img src="/images/gallery/burned2.jpg">
+      	<img src="/images/gallery/vien_of_happiness_and_sunshine.jpg">
+        <img src="/images/gallery/burned5.jpg">
+        <img src="/images/gallery/burned4.jpg">
+        <img src="/images/gallery/burned3.jpg">
+        <img src="images/gallery/burned1.jpg">
+        <img src="images/gallery/catgod_club_set_1_20250910225156.png">
+        </div>
+        </div>
+        </details>
+
+        <!-- webring widget 1 -->
+        <div style="display:none" class="snug-ring">
+        	<div class="snug-ring button"><p>&lt;-</p></div><div class="snug-ring label"><p>Snug ring</p></div><div class="snug-ring button"><p>-></p></div>
+        </div>
+<!-- webring widget final -->
+        <div class="snug-ring-box">
+        	<a href="https://snugnook.org/ring">
+        	<div class="snug-ring-box-label">
+        		<img class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/neofax.png">
+        	<p>Snug Ring</p>
+        	</div>
+        	</a>
+        	<div class="snug-ring-box-button">
+        		<a href="https://snugnook.org/ring/vuvien.xyz/previous">
+        		<button class="snug-ring-box-button-navigate">Prev</button>
+        		</a>
+<a href="https://snugnook.org/ring/random">
+	<button class="snug-ring-box-button-navigate">Random</button></a>
+        		<a href="https://snugnook.org/ring/vuvien.xyz/next"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
+</div>
+<!-- end content part -->
+
+<!-- footer part -->
+<div class="footer-part">
+        <div style="margin-left:auto;margin-right:auto;image-rendering:pixelated">
+        <img style="border:2px solid rgba(255,255,255,0.25)" src="/images/button.jpg">
+        <a href="https://wafelz.straw.page">
+        <img style="border:2px solid rgba(255,255,255,0.25)" src="/wafelz.gif">
+        </a>
+        </div>
+        <p style="text-align:center">Thank you sm for visiting <span style="color:#00be91;font-size:20px">❤︎</span></p>
+        </div>
+</div>
+<!-- end footer part -->
+        </div>
+        </div>
+        <div style="height:100px">
+        	
+        </div>
+    </body>
+</html>.socials img {
 	margin-inline: 5px;
 	position: relative;
 	width:40px;
