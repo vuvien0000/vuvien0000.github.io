@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEEP Clicker</title>
+    <style>
+    body {
+    	image-rendering: pixelated;
+    	margin: 0;
+    	background: url('https://i.pinimg.com/originals/1a/19/b8/1a19b805fd96a60d9582ca175519a6cd.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+* {
+	font-family: medocita;
+	color:white;
+}
+@font-face {
+	font-family: medocita;
+	src: url('/medocia.otf')
+}
+.button {
+	padding: 20px;
+position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	border-radius: 30px;
+	max-width: 70%;
+	max-height: 90%;
+	width: 300px;
+	height: 100px;
+	border: 3px solid rgba(0,0,0,0.25);
+	border-block-end: 10px solid rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.25),0px 10px 20px 10px rgba(255,255,255,0.5) inset;
+transition: 0.075s;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+.button:active {
+	border: 0px solid rgba(0,0,0,0);
+border-block-end: 0px solid rgba(0,0,0,0);
+	transform: translateY(7px);
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1),0px 7px 10px 2px rgba(0,0,0,0.25) inset;
+}
+.button p {
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 10px rgba(0,0,0,1);
+	font-size: 50px;
+	text-align: left;
+	pointer-events: none;
+}
+.box {
+position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 300px;
+    max-height: 600px;
+}
+.box p {
+	text-shadow: 0px 0px 10px rgba(0,0,0,1);
+    font-size: 23px;
+    line-height: 40px;
+}
+.box h1 {
+	text-shadow: 0px 0px 10px rgba(0,0,0,1);
+    font-size: 40px;
+}
+button {
+	box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.25),0px 10px 20px 10px rgba(255,255,255,0.5) inset;
+border-radius: 10px;
+	background: rgba(255,255,255,0);
+border: 3px solid rgba(0,0,0,0.25);
+padding: 10px;
+font-size: 20px;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+text-shadow: 0px 0px 10px rgba(0,0,0,1);
+transition: 0.1s;
+}
+button:active {
+	border: 0px solid rgba(0,0,0,0);
+border-block-end: 0px solid rgba(0,0,0,0);
+	transform: translateY(7px);
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1),0px 7px 10px 2px rgba(0,0,0,0.25) inset;
+}
+a {
+	text-decoration: none;
+	color:inherit;
+}
+    </style>
+</head>
+<body>
+
+	<audio>
+		<source src="https://www.myinstants.com/media/sounds/timer_beep.mp3" type="audio/mp3">
+	</audio>
+	<div class="box">
+		<h1>Beep clicker</h1>
+		<div onclick="hit()" class="button">
+			<p class="label" id="label">Click me
+			</p>
+		<script>
+		score = 0 ;
+			function hit() {
+				song = new Audio("https://www.myinstants.com/media/sounds/timer_beep.mp3") ;
+				song.play() ;
+				score +=1 ;
+document.getElementById("label").innerHTML = score ;
+			
+fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S3fW22ldREAY1z0sAJgwIrFP8KE-YsZG_y_fqml9LxcYc4w6Q", {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    content: " # BEEP <@&1496096484477894817>"
+  })
+});
+
+			}
+		</script>
+		</div>
+		<p>1 click = <a href="https://discord.com/invite/GNQ2CUYyYp"><button>my discord server</button></a> receive a BEEP ping.</p>
+	</div>
+</body>
