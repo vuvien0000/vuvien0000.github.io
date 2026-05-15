@@ -38,14 +38,18 @@ background:url('/images/flowers.jpeg');
 	margin-right:auto;
 }
 .wrap-two {
+position: relative;
+top:-50px;
 margin-left: auto;
 	margin-right:auto;
-border-radius: 0px 0px 20px 20px;
+border-radius: 20px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-
-background-color: rgba(0,0,0,0.25);
+background-color: rgba(0,0,0,0.5);
 box-shadow: 0px 0px 0px 3px rgba(255,255,255,0.5);
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0,0,0,1),rgba(0,0,0,1),
+rgba(0,0,0,1),rgba(0,0,0,1),rgba(0, 0, 0, 0));
+padding-block-end: 200px;
 }
 @media screen and (width >= 700px) {
 	.wrap {
@@ -138,7 +142,7 @@ word-break: break-all;
 .socials img {
 	margin-inline: 5px;
 	position: relative;
-	width:40px;
+	width:35px;
 	margin-block-start: 20px;
 	transition: 0.4s;
 }
@@ -153,15 +157,15 @@ word-break: break-all;
 a {
 	text-decoration: none;
 	transition: 0.3s;
-color:#39db90;
+color:#00b3ff;
+font-weight: bold;
 }
 .link:hover {
 	font-size: 20px;
 	font-weight: bold;
 }
 .socials img:hover {
-	width: 50px;
-	filter: drop-shadow(4px,4px,5px,white);
+	width: 40px;
 }
 .socials img:active {
 	opacity: 0.5;
@@ -240,6 +244,12 @@ margin-block: 5px;
 	margin-inline-end: 10px;
 	border:2px solid rgba(255,255,255,0.25);
     border-radius: 10px;
+}
+.box3 p {
+	filter: blur(5px);
+}
+.box3 button {
+	filter: blur(5px);
 }
 summary::marker { 
 	content: "✦ "; 
@@ -473,6 +483,11 @@ backdrop-filter: blur(30px);
 	padding-block: 15px;
     transition: 0.4s;
     margin-block-end: 20px;
+    background-size: cover;
+background: url('https://vuvien.nekoweb.org/images/output-smallpngtools.png');
+}
+.snug-ring-box.bucket {
+    background: url('https://vuvien.nekoweb.org/images/output-onlinepngtools.png');
 }
 .snug-ring-box-button {
 	position: relative;
@@ -520,6 +535,34 @@ border-radius: 10px;
   min-width: 100%; 
   min-height: 100%;
 }
+.bg-banner {
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
+z-index: -1;
+width: 100%;
+position: absolute;
+}
+.main-banner {
+	background: url('https://vuvien.nekoweb.org/images/banner-contest-art-v0-1yb8fqaj7mrf1.png');
+	height: 200px;
+	background-attachment: fixed;
+	background-size: 120vh;
+	background-repeat: no-repeat;
+	border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 15px 12px rgba(0,0,0,0.5);
+}
+.promo {
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+.boykisser {
+	pointer-events: none;
+	position: absolute;
+	width: 150px;
+	float: right;
+	top:20px;
+	right:1;
+	filter: drop-shadow(0px 0px 5px black);
+}
     </style>
     </head>
         <body onload="load()">
@@ -538,13 +581,17 @@ border-radius: 10px;
     		<img src="/images/logo-white.svg">
     		<noscript><p>[!] Please turn on JavaScript</p></noscript>
     	</div>
-    		
-    		<div class="wrap-two">
     			<div class="top-bar"></div>
+    	<div class="main-banner">
+</div>
+<div style="margin-inline:20px;display:block;margin-left:auto;margin-right:auto;max-width:500px">
+    			<img class="boykisser" src="https://vuvien.nekoweb.org/images/bk2.gif">
+    		</div>
+    		<div class="wrap-two">
     	<div class="padding">
     	<div class="wrap">
 <dialog id="dialog" class="dialog">
- 
+ <!-- guestbook -->
   <form method="dialog">
     <button style="" class="button2" type="submit">Close</button>
 <iframe style="border-radius:7px" src="https://vuvien.atabook.org/" width="100%" height="535px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
@@ -564,7 +611,7 @@ border-radius: 10px;
         	<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI">
         	<img src="images/icons2/tt.png">
         </a>
-        	<a href="https://castle.xyz/@that_new_emoji__">
+        	<a href="https://castle.xyz/@-no_skills">
         	<img src="images/icons2/cc.png">
         </a>
         	<a href="https://github.com/vuvien0000">
@@ -713,15 +760,16 @@ function show2() {
         	<p>• Castle people</p>
         	<a href="https://wafelz.straw.page">Wafelz • Strawpage</a>
         	<br><a href="https://xgs.straw.page">X game studios • Strawpage</a>
-	<br><a href="https://xarryberry.straw.page">Xarry (XarryBerry) • Strawpage</a>
-	<br><a href="https://luzerlmao.carrd.co">Luzer • Carrd</a>
-	<br><a href="https://globalrook.straw.page/">Globalrook • Strawpage</a>
-	<br><a href="https://chriiiiiiiiiisop.carrd.co/">Chrisop • Carrd</a>
-    <br><a href="https://rentry.co/nowmeyuks">YuksMeNow • Rentry</a>
+	<br><a class="links" href="https://xarryberry.straw.page">Xarry (XarryBerry) • Strawpage</a>
+	<br><a class="links" href="https://luzerlmao.carrd.co">Luzer • Carrd</a>
+	<br><a class="links" href="https://globalrook.straw.page/">Globalrook • Strawpage</a>
+	<br><a class="links" href="https://flowliketheguy.straw.page">Flow • Strawpage</a>
+	<br><a class="links" href="https://chriiiiiiiiiisop.carrd.co/">Chrisop • Carrd</a>
+    <br><a class="links" href="https://rentry.co/nowmeyuks">YuksMeNow • Rentry</a>
         <p>• Cool websites
         <br><span style="opacity:0.5">Adding soon</span></p>
         </details>
-        <details class="box1">
+        <details style="display:none" class="box1">
         	<summary>OC/Persona gallery</summary>
         <hr>
         <span style="position:relative;top:10px">Reference:</span><a download href="/images/gallery/aref.jpg"><button class="button-mini" style="float:right">Download ref image</button></a><br>
@@ -768,6 +816,25 @@ function show2() {
         		<a href="https://snugnook.org/ring/vuvien.xyz/next"><button class="snug-ring-box-button-navigate">Next</button></a>
         	</div>
         </div>
+<!-- -->
+        <div class="snug-ring-box bucket">
+        	<span style="left:-140px;font-size:10px;background:white;padding:5px 9px;border-radius:9px;position:relative;top:-23px;color:black">Pending</span>
+        	<a href="https://webring.bucketfish.me">
+        	<div class="snug-ring-box-label">
+        		<img class="snug-ring-box-label icon" src="https://avatars.githubusercontent.com/u/66538443?v=4">
+        	<p>Bucket Ring</p>
+        	</div>
+        	</a>
+        	<div class="snug-ring-box-button">
+        		<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=vuvien0000">
+        		<button class="snug-ring-box-button-navigate">Prev</button>
+        		</a>
+<a href="https://webring.bucketfish.me/redirect.html?to=random&name=vuvien0000">
+	<button class="snug-ring-box-button-navigate">Random</button></a>
+        		<a href="https://webring.bucketfish.me/redirect.html?to=next&name=vuvien0000"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
+
 </div>
 <!-- end content part -->
 
