@@ -12,12 +12,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="theme-color" content="#00be91">
 <meta name="twitter:card" content="summary_large_image">
+<link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
     <style>
 body {
 	color:white;
 	padding: 0;
 	margin: 0;
-background:url('/images/flowers.jpeg');
+	background: black;
+background-image:url('/images/flowers.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -39,15 +41,14 @@ background:url('/images/flowers.jpeg');
 	margin-right:auto;
 }
 .wrap-two {
+	top: 140px;
 position: relative;
-top:-50px;
 margin-left: auto;
 	margin-right:auto;
-border-radius: 20px;
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-background-color: rgba(0,0,0,0.5);
-box-shadow: 0px 0px 0px 3px rgba(255,255,255,0.5);
+border-radius: 17px;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+background-color: rgba(0,0,0,0.75);
 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0,0,0,1),rgba(0,0,0,1),
 rgba(0,0,0,1),rgba(0,0,0,1),rgba(0, 0, 0, 0));
 padding-block-end: 200px;
@@ -365,7 +366,7 @@ height: 70%;
 max-height: 600px;
 background-color: rgba(0,0,0,25);
 border:2px solid rgba(255,255,255,0.25);
-border-radius:10px;box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px 5px, rgba(0, 0, 0, 1) 0px 1px 3px -1px;
+border-radius:10px;box-shadow: rgba(0,0,0,0.5) 0px 0px 20px 5px, rgba(0, 0, 0, 1) 0px 1px 3px -1px;
 overflow:hidden;
 animation: open 0.4s;
 background: url("https://vuvien.nekoweb.org/images/tex.png");
@@ -449,8 +450,9 @@ backdrop-filter: blur(30px);
 	}
 	to {
 		opacity: 0;
-		scale: 2;
+		scale: 0.5;
 		z-index: 10;
+		border-radius: 20%;
 	}
 }
 .notice {
@@ -467,8 +469,8 @@ backdrop-filter: blur(30px);
 	top: 0;
 	margin: 0;
 	width: 100%;
-	height: 7px;
-	background: linear-gradient(to right,#7f7f7f,#c4c4c4,#fdadc8,#ffffff,#fdadc8,#c4c4c4,#7f7f7f)
+	height: 10px;
+	background: linear-gradient(to right,#00be91,#ae00ff);
 }
 
 .snug-ring-box {
@@ -484,6 +486,12 @@ background: url('https://vuvien.nekoweb.org/images/output-smallpngtools.png');
 }
 .snug-ring-box.bucket {
     background: url('https://vuvien.nekoweb.org/images/output-onlinepngtools.png');
+}
+.snug-ring-box.hotline {
+    background: linear-gradient(to right,rgba(150,192,250,0.35),rgba(221,44,245,0.35));
+}
+.snug-ring-box.gradient {
+background: linear-gradient(to right,rgba(0,190,145,0.35),rgba(174,0,255,0.35));
 }
 .snug-ring-box-button {
 	position: relative;
@@ -511,7 +519,6 @@ border-radius: 10px;
 	width: 35px;
 	height: 35px;
 	float: left;
-	rotate: 27deg;
 }
 .snug-ring-box-label p {
 	color:white;
@@ -536,19 +543,6 @@ mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
 z-index: -1;
 width: 100%;
 position: absolute;
-}
-.main-banner {
-	background: url('https://vuvien.nekoweb.org/images/banner-contest-art-v0-1yb8fqaj7mrf1.png');
-	height: 200px;
-	background-attachment: fixed;
-	background-size: 120vh;
-	background-repeat: no-repeat;
-	border-radius: 0px 0px 20px 20px;
-    box-shadow: 0px 0px 15px 12px rgba(0,0,0,0.5);
-}
-.promo {
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
 }
 .boykisser {
 	pointer-events: none;
@@ -577,13 +571,12 @@ backdrop-filter: blur(10px);
     		<img src="/images/logo-white.svg">
     		<noscript><p>[!] Please turn on JavaScript</p></noscript>
     	</div>
-    			<div class="top-bar"></div>
-    	<div class="main-banner">
-</div>
+
 <div style="margin-inline:20px;display:block;margin-left:auto;margin-right:auto;max-width:500px">
     			<img class="boykisser" src="https://vuvien.nekoweb.org/images/bk2.gif">
     		</div>
     		<div class="wrap-two">
+    			<div class="top-bar"></div>
     	<div class="padding">
     	<div class="wrap">
 <dialog id="dialog" class="dialog">
@@ -620,7 +613,7 @@ backdrop-filter: blur(10px);
         </div>
         </div>
         <hr>
-        <div class="banner-box">
+        <div style="image-rendering: pixelated;" class="banner-box">
 <div id="statuscafe">
 	<div id="statuscafe-username"></div><div id="statuscafe-content"></div><script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
         </div>
@@ -711,17 +704,18 @@ let params = new URLSearchParams("?invite=GNQ2CUYyYp");
         </div>
         <div id="lower">
 <div id="iconframe">
-
+<div class="server-icon">
 <img id="icon">
+</div>
             </div>
             <div id="dataframe">
                 <div style="display:none" id="inviter">
                     <span style="display:none" id="invitername"></span><span id="invitertag"></span>
                 </div>
+<img style="border:none;width:20px;height:20px;float:left;top:-9.5px;margin:0.05" src="https://discordresources.com/img/server/CommunityBoosted.svg">
                 <p style="position:relative;top:-10px" id="servername">Loading...</p>
-                <p style="margin-block-end:10px" id="counts">
-                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#39db90" id="onlinecount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#ff7af8" id="boostcount">•••</span>
-                </p>
+                <p style="font-weight:bold;margin-block-end:10px" id="counts">
+                    <span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#39db90" id="onlinecount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#ff7af8" id="boostcount">•••</span>                </p>
 <script>
 function send() {
 	alert("🔔 BEEP received!");
@@ -729,7 +723,7 @@ fetch("https://discord.com/api/webhooks/1496012113448276101/YgG8_cOWfNEqMLaBuC-S
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    content: "BEEP <@&1496096484477894817>"
+    content: "# BEEP <@&1496096484477894817>"
   })
 });
 }
@@ -829,8 +823,42 @@ function show2() {
         		<a href="https://webring.bucketfish.me/redirect.html?to=next&name=vuvien0000"><button class="snug-ring-box-button-navigate">Next</button></a>
         	</div>
         </div>
-
+<!-- -->
+        <div class="snug-ring-box hotline">
+        	<a href="https://hotlinewebring.club/">
+        	<div class="snug-ring-box-label">
+        		<img style="width:40px;height:40px;top:-1px;left:-3px" class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/pink-phone.png">
+        	<p>Hotline Ring</p>
+        	</div>
+        	</a>
+        	<div class="snug-ring-box-button">
+        		<a href="https://hotlinewebring.club/vuvien0000/previous">
+        		<button class="snug-ring-box-button-navigate">Previous</button>
+        		</a>
+        		<a href="https://hotlinewebring.club/vuvien0000/next"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
+<!-- -->
+                <div class="snug-ring-box gradient">
+        	<a href="https://webring.bucketfish.me">
+        	<div class="snug-ring-box-label">
+        		<img class="snug-ring-box-label icon" style="rotate:inherit;filter:invert(100%)" src="https://www.svgrepo.com/show/340812/pending.svg">
+        	<p>Gradient Ring</p>
+        	</div>
+        	</a>
+        	<p style="width:auto;float:right;background:white;color:black;padding:7px 7px;top:-10px;left:-10px;position:relative;border-radius:7px">Pending</p>
+        	<div style="display:none" class="snug-ring-box-button">
+        		<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=vuvien0000">
+        		<button class="snug-ring-box-button-navigate">Prev</button>
+        		</a>
+<a href="https://webring.bucketfish.me/redirect.html?to=random&name=vuvien0000">
+	<button class="snug-ring-box-button-navigate">Random</button></a>
+        		<a href="https://webring.bucketfish.me/redirect.html?to=next&name=vuvien0000"><button class="snug-ring-box-button-navigate">Next</button></a>
+        	</div>
+        </div>
+<!-- -->
 </div>
+
 <!-- end content part -->
 
 <!-- footer part -->
@@ -840,6 +868,7 @@ function show2() {
         <a href="https://wafelz.straw.page">
         <img style="border:2px solid rgba(255,255,255,0.25)" src="/wafelz.gif">
         </a>
+<iframe src="//incr.easrng.net/badge?key=-2" style="border:2px solid rgba(255,255,255,0.25);background: url(//incr.easrng.net/bg.gif);width:88px;height:31px" title="increment badge" width="88px" height="31px" frameborder="0"></iframe>
         </div>
         <p style="text-align:center">Thank you sm for visiting <span style="color:#00be91;font-size:20px">❤︎</span></p>
         </div>
