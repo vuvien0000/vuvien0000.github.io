@@ -23,7 +23,7 @@ function nom() {
 function faq() {
 	const faqiframe = document.getElementById('deck-faq');
 	if (isplay == 0) {
-faqiframe.src = 'https://castle.xyz/d/PMjqsq52KSAj?embed=true&bg=26164b' ;
+faqiframe.src = 'https://castle.xyz/d/0p-_8vn8Uas9?embed=true&bg=26164b' ;
 	} else {
 faqiframe.src = 'https://efefubvdfhbeufhueifbeufbueifewuifbeuiwvfebwf.vn' ;
 	}
