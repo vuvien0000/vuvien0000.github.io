@@ -18,7 +18,7 @@ var myFP = fluidPlayer(
 		"playbackRateEnabled": true,
 		"allowDownload": true,
 		"playButtonShowing": true,
-		"fillToContainer": false,
+		"fillToContainer": true,
 		"posterImage": ""
 	},
 	"vastOptions": {
@@ -48,7 +48,7 @@ var myFP = fluidPlayer(
 		"playbackRateEnabled": true,
 		"allowDownload": true,
 		"playButtonShowing": true,
-		"fillToContainer": false,
+		"fillToContainer": true,
 		"posterImage": ""
 	},
 	"vastOptions": {
