@@ -1,376 +1,449 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-   <title>vuvien's unnecessary website</title>
+   <title>vien</title>
    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="en" />
-   <meta name="description" content="Lorem ipsum labubu dubai chocolate labubu matcha ice latte">
-   <meta name="keywords" content="vuvien,vuvien0000,light,white,green,personal,vietnam,aboutme,dark">
+   <meta name="description" content="the website for all vien stuff, really">
+   <meta name="keywords" content="vuvien,vuvien0000,light,white,green,personal,vietnam,aboutme,dark,no skills,no_skills">
    <meta name="author" content="Vu Vien">
-<meta property="og:image" content="https://vuvien.nekoweb.org/images/banner/v.png">
+<meta property="og:image" content="https://vuvien.nekoweb.org/images/banner/Document361.png">
    <link rel="icon" type="image/x-icon" href="/images/logo-white.svg">
-<meta name="theme-color" content="black" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-status-bar-style" content="#26164b">
 <meta name="theme-color" content="#00be91">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
-    <style>
-    body {
-    	background-color: #085562;
-    	margin: 0;
-    	padding: 0;
-    }
-    .dark-mode {
-    	background-color: black;
-    }
-    summary { 
-    	word-break: break-all;
-    	transition: 0.3s;
-    	font-size: 30px;
-    }
-    * {
-    	color:white;
-    	font-family: spacemono;
-    	font-weight: normal;
--webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    }
-p {
-	letter-spacing: -0.75px;
-}
-@font-face {
-	font-family: spacemono;
-	src: url('/spacemono-regular.ttf')
-}
-    .wrap {
-    	padding: 27px;
-    }
-    .wrap2 {
-    	max-width: 700px;
-    	margin-left: auto;
-    	margin-right: auto;
-    }
-    summary:hover {
-    	background: rgba(255,255,255,0.1);
-    	padding: 10px;
-    	padding-inline-start: 15px;
-    	border-radius: 10px;
-    }
-    summary:active {
-    	opacity: 0.5;
-    }
-summary::marker { 
-	content: "✦ "; 
-}
-details {
-	margin-block: 20px;
-}
-details[open] summary::marker {
-	content: "▲ ";
-}
-hr {
-margin-block: 15px;
-	border:none;
-	border-block-start: 2px dashed rgba(255,255,255,0.25);
-}
-.header h1 {
-	font-weight: normal;
-	font-size: 40px;
-	margin: 0;
-word-break: break-all;
-text-align: center;
-}
-.header p {
-	font-size: 15px;
-	margin: 0;
-	opacity: 0.6;
-letter-spacing: -0.75px;
-}
-.logo {
-	margin: -10px -10px 0px 0px;
-	position: relative;
-	width: 40px;
-    top:10px;
-    pointer-events: none;
-}
-.socials img {
-	width:35px;
-	transition: 0.4s;
-	margin-inline: 7px;
-}
-.socials img:hover {
-	opacity: 0.5;
-	rotate: 30deg;
-}
-.socials-wrap {
-	margin-block-start: 10px;
-	display:block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 400px;
-	max-width: 90%;
-}
-.socials {
-	margin-left: auto;
-	margin-right: auto;
-	border: 2px solid rgba(0,0,0,0);
-	width: 100%;
-display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-a {
-	text-decoration: none;
-	color: #39db90;
-}
-.bar {
-	border-block-end: 2px solid rgba(255,255,255,0.25);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
-	padding: 5px 25px;
-	z-index: 10;
-	position: sticky;
-	top: 0;
-}
-.bar p {
-	text-align: center;
-}
-.content {
-	margin-block-end: 30px;
-	position: relative;
-	top: 15px;
-	padding: 10px;
-	border-radius: 9px;
-	border: 2px dashed rgba(255,255,255,0.25);
-}
-.bar button {
-	border:2px solid rgba(255,255,255,1);
-	border-block-end: 3px rgba(255,255,255,0.5);
-    border-radius: 10px;
-    position: relative;
-    top: -48px;
-	float: right;
-	padding: 10px;
-	background: rgba(255,255,255,1);
-	color:black;
-}
-.footer {
-	opacity: 0.5;
-	font-size: 13px;
-}
-.footer img {
-	max-width: 100px;
-	float: left;
-	pointer-events: none;
-	margin: 10px;
-	padding: 7px;
-	border: 3px solid white;
-	border-radius: 10px;
-}
-.footer p {
-	position: relative;
-	top: 10px;
-}
-.gamebox img {
-	border-radius: 6px;
-	border: 2px solid rgba(255,255,255,0.25);
-}
-.webrings {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-}
-.snug-ring-box {
-	width:100%;
-	max-width: 400px;
-	height: 40px;
-	border: 2px solid rgba(255,255,255,0.25);
-	border-radius: 10px;
-	padding: 10px;
-	padding-block: 15px;
-    transition: 0.4s;
-    margin-block-end: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-background: url('https://vuvien.nekoweb.org/images/output-smallpngtools.png');
-}
-.snug-ring-box.bucket {
-    background: url('https://vuvien.nekoweb.org/images/output-onlinepngtools.png');
-}
-.snug-ring-box.hotline {
-    background: linear-gradient(to right,rgba(150,192,250,0.35),rgba(221,44,245,0.35));
-}
-.snug-ring-box.gradient {
-background: linear-gradient(to right,rgba(0,190,145,0.35),rgba(174,0,255,0.35));
-}
-.snug-ring-box-button {
-	position: relative;
-	float: right;
-right: 5px;
-}
-.snug-ring-box-button-navigate {
-margin-inline: 2px;
-	color:white;
-	font-size: 10px;
-border-radius: 10px;
-	padding: 10px;
-	border: 2px solid rgba(255,255,255,0.25);
-	background-color: rgba(255,255,255,0.1);
-	border-block-end: 4px solid rgba(255,255,255,0.25);
-    transition: 0.2s;
-}
-.snug-ring-box-label {
-	float: left;
-	margin-inline-start: 5px;
-}
-.snug-ring-box-label.icon {
-	position: relative;
-	top:3px;
-	width: 35px;
-	height: 35px;
-	float: left;
-}
-.snug-ring-box-label p {
-	color:white;
-	margin-block-start: 11px;
-	margin-inline-start: 15px;
-	float: right;
-	position: relative;
-	top: -2px;
-	font-weight: bold;
-}
-button:active {
-	scale:0.9;
-	background-color: white;
-	color:black;
-	border-block-end: 0px;
-	transform: translate(10px);
-}
-    </style>
+<script src="https://u.widget.st/ar.js"></script>
+<link rel="stylesheet" href="/sheet.css">
     </head>
-    <body>
-
+	
+    <body><script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MR9FFJMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+		<a href="#front-page">
+    	<div id="bar" class="bar">
+    		<p>vuvien</p>
+			<img src="/images/logo-white.svg">
     	</div>
-    	<div class="wrap2">
+		</a>
+    		<div id="front-page" class="front-page">
+    			<div class="front-page-wrap">
+    			<div class="front-page-drawing">
+					<img src="https://vuvien.nekoweb.org/images/newicons/welcome-art.png">
+    			</div>
+				<div class="front-page-text">
+					<div>
+					<img src="https://vuvien.nekoweb.org/images/newicons/welcome.gif">
+					<br>
+					<a href="#start"><button>Explore</button></a> or <a href="#collection"><button>Play</button></a>
+					</div>
+				</div>
+				<div class="scroll-guide">
+					<img src="https://media.invisioncic.com/p289038/monthly_2020_05/arrow-down.gif.8d9aec7b8f92f2a50a1a64fce1733f3a.gif">
+				</div>
+    			</div>
+    		</div>
+    	    		</div>
+<div class="play">
+	<h1 id="collection">Collection</h1>
+	<p>A collection of interactive stuff displaying in a card sized window
+		<br>100% hand-crafted, free & enjoyable for everyone to try
+		<br>Most of them are old (2-3 years ago), and horribly made on my phone.
+	</p>
+	<h3><img src="https://vuvien.nekoweb.org/images/newicons/random.png"> Random<span style="opacity: 0.4;">14</span></h3>
+	<div class="deck-belt">
+<img onclick="show('PMjqsq52KSAj')" class="decks" src="https://image.castle.xyz/15e408df4a651413ebc2c3e29aff2142?h=800&ar=5%3A7">
+<img onclick="show('c-PEtgsq3A')" class="decks" src="https://image.castle.xyz/65e47d6f4fe16fc3f94079112eef2ac1?h=800&ar=5%3A7">
+<img onclick="show('QyV9mGNKV')" class="decks" src="https://image.castle.xyz/5719bd3e8f23c9eb1e2c2a046095a36b?h=800&ar=5%3A7">
+<img onclick="show('r7L1hGxO0h8T')" class="decks" src="https://image.castle.xyz/fa1341b1f9fe09feac4baa40c7647da5?h=800&ar=5%3A7">
+<img onclick="show('FAPCONEKe2')" class="decks" src="https://image.castle.xyz/a522a88e70b6ae9c23f55e646df7b517?h=800&ar=5%3A7">
+<img onclick="show('BHwuE5Ys7uNp')" class="decks" src="https://image.castle.xyz/6da9f14ad9763a3362bb16c347aea286?h=800&ar=5%3A7">
+<img onclick="show('SQiNxDcBNjeO')" class="decks" src="https://image.castle.xyz/409d2b4b9210f31ffc2570f3eec79f87?h=800&ar=5%3A7">
+<img onclick="show('cio2fy2AXYml')" class="decks" src="https://image.castle.xyz/c06221f92f0c1f14c6897875a839e436?h=800&ar=5%3A7">
+<img onclick="show('UkpyJ3o6Xi')" class="decks" src="https://castle.xyz/_next/image?url=https%3A%2F%2Fimage.castle.xyz%2F2c47af6b148f8d5e627d028272d06da8%3Fh%3D400%26format%3Dwebp%26ar%3D5%3A7&w=750&q=75">
+<img onclick="show('6ByJCqCUD')" class="decks" src="https://image.castle.xyz/744cf11a5609e71e0b369a5f37ecd91a?h=800&ar=5%3A7">
+<img onclick="show('X7o0iDeVVAcg')" class="decks" src="https://image.castle.xyz/4b1aa538263067eb797c5a87df16d452?h=800&ar=5%3A7">
+<img onclick="show('WhrbiqbTh')" class="decks" src="https://image.castle.xyz/2b780c8bc04d366d5c0ed9cfd137a95a?h=800&ar=5%3A7">
+<img onclick="show('hEMa0TZiL')" class="decks" src="https://image.castle.xyz/67fe2724726bdc94d17b62341953957e?h=800&ar=5%3A7">
+<img onclick="show('OXGupbgDJ')" class="decks" src="https://image.castle.xyz/f83333cba28f473e62a4ccacdc76ec2c?h=800&ar=5%3A7">
+	</div>
+	<h3><img src="https://vuvien.nekoweb.org/images/newicons/jigsaw.png"> BAD Games<span style="opacity: 0.4;">7</span></h3>
+	<div class="deck-belt">
+<img onclick="show('JroWnJnJ-')" class="decks" src="https://image.castle.xyz/73fc4fc13308bc995fb192aaea1b9079?h=800&ar=5%3A7">
+<img onclick="show('gk-DLT70W')" class="decks" src="https://image.castle.xyz/f031e085266140bd732fe04dd56cc681?h=800&ar=5%3A7">
+<img onclick="show('WnMdP4qTP')" class="decks" src="https://image.castle.xyz/99f571d7e39b8ab594c72be3d2a333bc?h=800&ar=5%3A7">
+<img onclick="show('3K0OJnOH9')" class="decks" src="https://image.castle.xyz/5981602bbaa49a4bfee24b3493f306df?h=800&ar=5%3A7">
+<img onclick="show('RBID9eRgf0uT')" class="decks" src="https://image.castle.xyz/48e08fec7eb994b7b286c0e389133d42?h=800&ar=5%3A7">
+<img onclick="show('FKA-w56cO')" class="decks" src="https://image.castle.xyz/1b8a8306a7273190b2f28efde2b38d0a?h=800&ar=5%3A7">
+<img onclick="show('x_8_caQra')" class="decks" src="https://image.castle.xyz/4e38d20ad7e45b5b30d9ddf357663acc?h=800&ar=5%3A7">
+	</div>
+	<h3><img src="https://vuvien.nekoweb.org/images/newicons/video.png"> Animations<span style="opacity: 0.4;">5</span></h3>
+	<div class="deck-belt">
+<img onclick="show('YJqxqIPiKfKV')" class="decks" src="https://image.castle.xyz/5472fd2b5c6560c0adb6fa7d44910016?h=800&ar=5%3A7">
+<img onclick="show('7ccp2R-WF2TI')" class="decks" src="https://image.castle.xyz/272839ce3d3a5b833a7ead446639e119?h=800&ar=5%3A7">
+<img onclick="show('AfstV3pCrLaI')" class="decks" src="https://image.castle.xyz/885b6d2e12c05b497363327e0b4acb27?h=800&ar=5%3A7">
+<img onclick="show('0GmaVGmmN1rf')" class="decks" src="https://image.castle.xyz/a380509e302f560f6c4223f08833932f?h=800&ar=5%3A7">
+<img onclick="show('iHwm3Mvz_JZf')" class="decks" src="https://image.castle.xyz/9e3d114814077d40a2665cef5b37a72e?h=800&ar=5%3A7">
+</div>
+	<h3><img src="https://vuvien.nekoweb.org/images/newicons/explosives.png"> Misc<span style="opacity: 0.4;">10</span></h3>
+	<div class="deck-belt">
+<img onclick="show('gisYIm4_VoUB')" class="decks" src="https://image.castle.xyz/default-card?h=800&ar=5%3A7">
+<img onclick="show('KAppfpp6a')" class="decks" src="https://image.castle.xyz/6c942c9b166460115c049ad4520750b5?h=800&ar=5%3A7">
+<img onclick="show('cVm6xl3Lls')" class="decks" src="https://image.castle.xyz/11346c36730b98917a8116aa0fa63552?h=800&ar=5%3A7">
+<img onclick="show('LzbWPxiBql')" class="decks" src="https://image.castle.xyz/6496413751771b4b07be482f1ab164a0?h=800&ar=5%3A7">
+<img onclick="show('hbEd_-n3F')" class="decks" src="https://image.castle.xyz/e37296206f422160908145835201b1fa?h=800&ar=5%3A7">
+<img onclick="show('8MMSuj41b')" class="decks" src="https://image.castle.xyz/d4190929e56feb314cef62e886e049c3?h=800&ar=5%3A7">
+<img onclick="show('rr-vRkPtZ')" class="decks" src="https://image.castle.xyz/0585934d42d351309361b70f7f122518?h=800&ar=5%3A7">
+<img onclick="show('yhlixE-Sz')" class="decks" src="https://image.castle.xyz/ca3d932cb3fa1b03f5692372f48e45a4?h=800&ar=5%3A7">
+<img onclick="show('gzfEQgPPnURI')" class="decks" src="https://image.castle.xyz/12fd2389a799ae03ddfed26803b4b5af?h=800&ar=5%3A7">
+<img onclick="show('5ISc9CHMI')" class="decks" src="https://image.castle.xyz/8fbc5fd16a17971798fe23ff138dc36e?h=800&ar=5%3A7">
+	</div>
+</div>
+<dialog id="dialog" class="deckplay">
+  <form method="dialog">
+	<div class="opt-buttons">
+<button onclick="stop()" type="submit">Exit</button><button onclick="reload()" type="button">Reload</button><button onclick="rotate()" type="button">Rotate</button>
+	</div>
+	<div class="dialog-wrap">
+<iframe id="deck-frame"	src=""	width="450"	height="auto"	frameborder="0"	scrolling="no"	credentialless	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"	style="max-width: 100%; aspect-ratio: 450/729; height: auto;"></iframe>
+  <img src="https://vuvien.nekoweb.org/images/newicons/no-skills.png">
+</div>
+</form>
+</dialog>
+<script src="/deckplayer.js"></script>
+
+    	    	<div class="wrap2">
     	<div class="wrap">
     	<div class="section">
     		        <div class="header">
-        	<h1><img class="logo" src="/images/logo-white.svg"> vuvien<span style="opacity:0.5;letter-spacing:-15px">⁰⁰⁰⁰</span></h1>
+        	<h1><img class="logo" src="/images/logo-white.svg"> vuvien</h1>
         <div class="socials-wrap">
         <div class="socials">
-        	<a href="https://discord.com/users/777798212743856128">
-        	<img style="top:2px" src="images/icons2/dc.png">
-        </a>
-        	<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI">
-        	<img src="images/icons2/tt.png">
-        </a>
-        	<a href="https://castle.xyz/@no_skills_">
-        	<img src="images/icons2/cc.png">
-        </a>
-        	<a href="https://github.com/vuvien0000">
-        	<img src="images/icons2/gh.png">
-        </a>
-        	<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847">
-        	<img src="images/icons2/rb.png">
-        </a>
-        </div>
-        </div>
-        </div>
+<a href="https://discord.com/users/777798212743856128"><img style="top:2px" src="images/icons2/dc.png"></a>
+<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI"><img src="images/icons2/tt.png"></a>
+<a href="https://castle.xyz/@no_skills_"><img src="images/icons2/cc.png"> </a>
+<a href="https://github.com/vuvien0000"><img src="images/icons2/gh.png"></a>
+<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847"><img src="images/icons2/rb.png"></a>
+</div></div></div>
         <hr>
-        <img style="pointer-events:none;display:block;margin-left:auto;margin-right:auto;width:200px;filter:invert(100%)" src="https://www.svgrepo.com/show/307735/construction-sign-work.svg">
-<h1 style="font-size:23px;text-align:center;font-weight:bold">Website under rework</h1>
-<p style="font-size:16px;text-align:center;position:relative;top:-10px">Check back soooon</p>
+        <details id="start">
+        	<summary><img src="https://vuvien.nekoweb.org/images/newicons/about.png"><span class="summary-txt">Who</span></summary>
+      	<div style="padding: 0;" class="content">
+			<p class="pinned-top">TD;LR: vien</p>
+			<div style="padding: 10px;">
+			<h3 style="font-weight: bold;"><img onclick="nom()" class="apple-gif" src="https://vuvien.nekoweb.org/images/apple2.gif"> It's vien &lt;3</h3>
+			<p class="about-write">hello hello! i'm a random person who LOVES to create things on the internet for fun, i mostly spend time making interactive stuff on my phone, but now i’m trying out other things too (this website is an example)
+<br>non-binary, apple is my favorite fruit and i like mint.
+<br>Fav games!!: 
+<br><br>
+<img src="https://vuvien.nekoweb.org/images/newicons/game1.png">
+<img src="https://vuvien.nekoweb.org/images/newicons/game4.png">
+<img src="https://vuvien.nekoweb.org/images/newicons/game3.png">
+<img src="https://vuvien.nekoweb.org/images/newicons/game8.webp">
+<img src="https://vuvien.nekoweb.org/images/newicons/game5.png">
+<img src="https://vuvien.nekoweb.org/images/newicons/game7.png">
+<img src="https://vuvien.nekoweb.org/images/newicons/game2.webp">
+<img src="https://vuvien.nekoweb.org/images/newicons/game6.png">
+</p>
+<br>credits to <a href="https://castle.xyz/@Emanoko">emanoko</a>
+<br>
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<div style="max-width: 300px;float: left;"><video controls id="video"><source src="https://vuvien.nekoweb.org/images/newicons/sad-dance.mp4" type="video/mp4"></video></div><div style="max-width: 300px;"><video controls id="video2"><source src="https://vuvien.nekoweb.org/images/newicons/video_20261107_153303_edit.mp4" type="video/mp4"></video></div>
+<script src="/fluidplayer.js"></script>
+ </details>
+<details>
+<summary><img src="https://vuvien.nekoweb.org/images/newicons/gallery.png"><span class="summary-txt">Gallery</span></summary>
+<div style="padding: 0;" class="content">
+<p class="pinned-top">Random images and stuff like that</p>
+<div style="padding: 10px;">
+<p class="label">Random</p>
+<ws-widget type="viewer" iid="1798" embed="script">
+<div class="row">
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-bfgm.png">joke object show</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/wp-ladyportent.jpg">oc by darkstygian</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-generive-logo.png">generive but blue</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-dweller-super.png">dweller super</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-dweller-max.png">dweller max</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-vuvien.png">2 doritos looking thing</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-daudix-bd.png">happy birthday daudih</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-human-made.png">idk</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-noskills.png">no skills</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/newicons/wp-dellme.png">random Vietnamese word-play</div>
+</div>
+</ws-widget>
+<p class="label"> Sona</p>
+<ws-widget type="viewer" iid="1798" embed="script">
+<div class="row">
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork4.png">nooby_3101</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/doodle.png">parachio</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/error-img.png">???</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork3.png">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork2.png">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/comm.webp">xarryberry</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/comm.png">void</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/pfp2.png">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/larp.png">???</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/comm2.webp">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork3.jpg">nooby_3101</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork2.webp">luzerlmao</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/pfp1.png">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork.webp">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/artwork.png">angelfailure</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/doodle.jpg">???</div>
+</div>
+<p class="label"> Skewers</p>
+<div class="row">
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/artwork.png">mungon_(catgod)</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/artwork2.png">flowliketheguy</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/artwork.jpg">parachio</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/doodle.jpg">mentallyinsaneperson</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/doodle2.jpg">guyam</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/doodle4.jpg">luzerlmao</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/doodle3.jpg">luzerlmao</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/gallery/doodle5.jpg">secothbro</div>
+</div><img style="display: block;margin-left:auto;margin-right: auto;width:100%;max-width: 120px;" src="https://vuvien.nekoweb.org/images/newicons/skewers-heart.png">
+<p class="label"> Xien</p>
+<div class="row">
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/x-artwork3.jpg">TheCracked</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/x-artwork2.jpg">Caiolitas</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/x-artwork.png">parachio</div>
+<div class="credits"><img src="https://vuvien.nekoweb.org/images/new-gallery/x-artwork.jpg">???</div>
+</div></div>
+</ws-widget>
+	</div></div>
+</details>
+<details>
+	<summary><img src="https://vuvien.nekoweb.org/images/newicons/apple-notes.png"><span class="summary-txt">Board</span></summary>
+	<div style="padding: 0;" class="content">
+<div id="statuscafe">
+	<div id="statuscafe-username">
+		Be patient!
+	</div>
+	<div id="statuscafe-content">
+		Loading status...
+	</div>
+	</div>
+	<script src="https://status.cafe/current-status.js?name=vu_vien" defer></script>
+<div style="padding: 0px 10px;">
+<ws-widget type="viewer" iid="1798" embed="script">
+<div class="notes">
+	<p class="notes-header">10/27/2026 9:36 PM UTC+7</p>
+	<p class="notes-content">this is pissing me off</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1564649047417946132/IMG_20261027_093136.jpg?ex=6ae2087a&is=6ae0b6fa&hm=4014bdf8c4dfd38887dec7a33d531598d1b19f5a7f52f5f92cea56b2fe367f99">
+</div>
+<div class="notes">
+	<p class="notes-header">10/26/2026 9:32 PM UTC+7</p>
+	<p class="notes-content">???why do we have ai classes now</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1564276981254852658/Screenshot_2026-10-26-20-19-25-372_com.ss.android.ugc.trill.jpg?ex=6ae156b7&is=6ae00537&hm=050c830f0ad3d0de68df66914ed1d1b0e4a7f754852f3a4585f2f75bc0d0ea1a"></div>
+<div class="notes">
+	<p class="notes-header">10/25/2026 5:51 PM UTC+7</p>
+	<p class="notes-content">i need to somehow get a better data pack this sucks</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1563867629960175726/original_fa6c3c27-9a9d-4db4-ae60-4bed136e7a34_Screenshot_2026-10-25-17-45-12-300_com.viettel.appviettel.jpg?ex=6ae12afa&is=6adfd97a&hm=fda923a687477d19f3b59b35365bac60d1956df23e4f3c78811607702ad4286e"</div>
+<div class="notes">
+	<p class="notes-header">10/23/2026 7:52 PM UTC+7</p>
+	<p class="notes-content">moral lesson<br>do NOT lend anyone money except your parents<br>i hate myself for making stupid life decisions<br>now ill have to use mobile data until i get money</p></div>
+<div class="notes">
+	<p class="notes-header">10/11/2026 10:44 AM UTC+7</p>
+	<p class="notes-content">oh lmao i overslept and skipped economic class today</p></div>
+<div class="notes">
+	<p class="notes-header">10/8/2026 1:21 PM UTC+7</p>
+	<p class="notes-content">oh great<br>i have sunday classes now<br>wow</p></div>
+<div class="notes">
+    <p class="notes-header">10/6/2026 8:34 PM UTC+7</p><p class="notes-content">30k reached before 2027 I DID IT</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1557023140884910180/Screenshot_2026-10-06-20-27-30-536_xyz.castle.jpg?backend=b2&ex=6ae1510c&is=6adfff8c&hm=b2f7e2f1ba270455cd04d7a1e53974901959574178187052b847859c12155285"></div>
+<div class="notes">
+	<p class="notes-header">9/23/2026 6:16 PM UTC+7</p>
+	<p class="notes-content">im FINALLY done with my project<br>omfg<br>now im waiting for approval</p></div>
+<div class="notes">
+	<p class="notes-header">9/14/2026 7:17 PM UTC+7</p>
+	<p class="notes-content">tomorrow is 15th of september AND ITS THE DEADLINE<br>i need tofinish my project this night #%*&<br>gotta lock in</p></div>
+<div class="notes">
+	<p class="notes-header">9/5/2026 11:13 AM UTC+7</p>
+	<p class="notes-content">they removed the iconic green leaf on the momo wallet app this is so sad</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1545648097047085056/Khong_Co_Tieu_e1_20260905111222.png?ex=6ae17677&is=6ae024f7&hm=1aecbcaced3c7cfa8cac2ece3b4f5c64dc6c81c986c1683aa3c1c0e2922c32c9">
+	<p class="notes-content">they better bring it back the app is losing energies</p>
+	<p class="notes-content">anyways now im gonna share insane things i found in tdc's kitchen while cleaning</p>
+	<img
+	class="censored-img"
+	 src="https://cdn.discordapp.com/attachments/1521750350460092446/1545652769149427822/IMG_20260807_154201.jpg?ex=6ae17ad1&is=6ae02951&hm=1a7e0500a4d0370cfa2bc2156c9ad3f0cc2134414dd4caed91b3f8290cf59514"></div>
+<div class="notes">
+	<p class="notes-header">8/26/2026 9:26 PM UTC+7</p>
+	<p class="notes-content">im back home</p></div>
+<div class="notes">
+	<p class="notes-header">8/24/2026 5:46 PM UTC+7</p>
+	<p class="notes-content">i just got my paycheck!<br>pretty sure i can go home tomorrow or soon</p></div>
+<div class="notes">
+	<p class="notes-header">8/18/2026 11:40 AM UTC+7</p>
+	<p class="notes-content">i now officially quitted my job today<br>left tdc<br>employment arc ENDS</p></div>
+<div class="notes">
+	<p class="notes-header">8/17/2026 12:40 AM UTC+7</p>
+	<p class="notes-content">gotta tryna convincing the boss so my bro and me can get outta tdc asap<br>at first i thought the whole team will get paid instantly but<br>thenn the boss is dealing with bankruptcy???<br>this leads to 2 main technicians got paid first<br>but the rest</p></div>
+<div class="notes">
+	<p class="notes-header">8/16/2026 9:10 PM UTC+7</p>
+	<p class="notes-content">still waiting</p></div>
+<div class="notes">
+	<p class="notes-header">8/15/2026 7:28 PM UTC+7</p>
+	<p class="notes-content">my boss sent me this today <br>just kidding i edited the file dont wanna show my actual salary, just know that im not being underpaid thats good</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1538162489747841166/Khong_Co_Tieu_e2_20260815175331.png?ex=6ae141b3&is=6adff033&hm=36bb4166688e6b7697a421a3c93fdf48d11023d5c318da473b8c3cd86d0178f4"></div>
+<div class="notes">
+	<p class="notes-header">8/14/2026 12:08 AM UTC+7</p>
+	<p class="notes-content">got some news from the boss</p></div>
+<div class="notes">
+	<p class="notes-header">8/12/2026 9:32 PM UTC+7</p>
+	<p class="notes-content">worried about my paycheck</p></div>
+<div class="notes">
+	<p class="notes-header">8/7/2026 2:14 PM UTC+7</p>
+	<p class="notes-content">changed my sona into a green person</p></div>
+<div class="notes">
+	<p class="notes-header">7/29/2026 10:29 PM UTC+7</p>
+	<p class="notes-content">finally my team finished the project and now i can rest 🥹<br>just have to wait for a few more days for my paycheck (i think???) <br>i think ill continue to work on my website rather than making a new deck rn<br>ive planned to focus on the last huge game deck after quitting my job<br>just 1 more month away from school yippe</p></div>
+	<div class="notes">
+		<p class="notes-header">7/11/2026 6:35 AM UTC+7</p>
+		<p class="notes-content">ive been like very inactive there but still getting an email from castle <br>you can now earn money from castle (5000+ bricks required)</p>
+	<img src="https://cdn.discordapp.com/attachments/1521750350460092446/1525284325405229178/Screenshot_2026-07-11-06-28-59-832_com.microsoft.office.outlook.jpg?ex=6ae13539&is=6adfe3b9&hm=56990a9ed195c5476eb6c5c4f18ec1e4d8eed269df598a1b99d4e307ac5a9c25"></div>
+<div class="notes">
+	<p class="notes-header">7/2/2026 11:16 PM UTC+7</p>
+	<p class="notes-content">welcome to my board i'll basically share my stuff and random thoughts here thats all</p></div>
+<a href="#start"><button>Back to top</button></a>
+</ws-widget>
+	</div>
 
-<!-- webring widget final -->
-<div class="webrings">
-        <div class="snug-ring-box">
-        	<a href="https://snugnook.org/ring">
-        	<div class="snug-ring-box-label">
-        		<img class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/neofax.png">
-        	<p>Snug Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://snugnook.org/ring/vuvien.xyz/previous">
-        		<button class="snug-ring-box-button-navigate">Prev</button>
-        		</a>
-<a href="https://snugnook.org/ring/random">
-	<button class="snug-ring-box-button-navigate">Random</button></a>
-        		<a href="https://snugnook.org/ring/vuvien.xyz/next"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
+	</div>
+</details>
+    	<details>
+	<summary><img src="https://vuvien.nekoweb.org/images/newicons/guestbook.png"><span class="summary-txt">Guestbook</span></summary>
+	
+	<div style="padding: 0;" class="content"><p class="pinned-top">Could've used a better looking one but who cares</p>
+<iframe style="height:500px" src="https://vuvien.atabook.org/" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+	</div>
+</details>
+<details>
+<summary><img src="https://vuvien.nekoweb.org/images/newicons/folder-paperplane.png"><span class="summary-txt">Links</span></summary>
+<div style="padding: 0;" class="content">
+<p class="pinned-top">Click on a badge/button to visit a website, feel free to put my buttons onto your site.</p>
+<div style="padding: 0px 10px;">
+<div class="links">			
+<p class="label">My buttons</p>
+<img src="https://vuvien.nekoweb.org/images/button.jpg">
+<img src="https://vuvien.nekoweb.org/vbutton2.jpg">
+<p class="label">Site friends</p>
+<a href="https://lucastheguy.nekoweb.org/" target="_blank"><img src="https://lucastheguy.nekoweb.org/images/button.gif"></a>
+<a href="https://k1loby.github.io/" target="_blank"><img src="https://k1loby.github.io/addtoyourpage.webp"></a>
+<a href="https://kakalot17.github.io/" target="_blank"><img src="https://kakalot17.github.io/mybadge.png"></a>
+<a href="https://ioxtv.co/" target="_blank"><img src="https://ioxtv.co/assets/buttons/iox.gif"></a>
+<p class="label">Cool site people</p>
+<a href="https://anins1der.is-a.dev/" target="_blank"><img src="https://anins1der.is-a.dev/badges/anins1der.gif"></a>
+<a href="https://mambuco.dev/" target="_blank"><img src="https://mambuco.dev/badges/mambuco.gif"></a>
+<a href="https://skyweaver.nekoweb.org/" target="_blank"><img src="https://daudix.one/badges/badges/skyweaver.gif?h=cc41259e0abbbad38c99"></a>
+<a href="https://daudix.one/" target="_blank"><img src="https://daudix.one/badges/badges/daudix.gif?h=9b916484ddaa3b989cd9"></a>
+<a href="https://kevadesu.github.io/" target="_blank"><img src="https://kevadesu.github.io/88x31.gif"></a>
+<a href="https://reduxflakes.nekoweb.org/" target="_blank"><img src="https://reduxflakes.nekoweb.org/img/hcl6TIROJn-88.webp"></a>
+<a href="https://xip.neocities.org/" target="_blank"><img src="https://reduxflakes.nekoweb.org/img/HY7NLtnW4S-88.webp"></a>
+<a href="https://immjs.dev/" target="_blank"><img src="https://immjs.dev/88x31s/immjs.dev.gif"></a>
+<a href="https://futile.eu/" target="_blank"><img src="https://reduxflakes.nekoweb.org/img/SgE3Od4PAs-88.webp"></a>
+<a href="https://snugnook.org/" target="_blank"><img src="https://k1loby.github.io/badges/snugnook.org.gif"></a>
+<a href="https://michi.onl/" target="_blank"><img style="width: 88px;height: 31px;" src="https://anins1der.is-a.dev/badges/michi.onl.gif"></a>
+<a href="https://melankorin.net" target="_blank"><img src="https://daudix.one/badges/badges/melankorin.gif?h=affc25ccb678b6fbc806"></a>
+<a href="https://retrobloxxer.github.io/" target="_blank"><img src="https://retrobloxxer.github.io/badges/badges/ro.er%205.gif?h=11fbb7843b3fae8c3395"></a>
+<a href="https://aeronook.eu/" target="_blank"><img src="https://aeronook.eu/green8831.webp"></a>
+</div>
+		<p class="label">Webrings</p>
+<p><a href="https://snugnook.org/ring">Snug Ring  -</a> <a href="https://snugnook.org/ring/vuvien.xyz/previous"> &lt;</a><a href="https://snugnook.org/ring/random"> Random</a><a href="https://snugnook.org/ring/vuvien.xyz/next"> ></a></p>
+<p><a href="https://webring.bucketfish.me">Bucket Ring  -</a> <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=vuvien0000"> &lt;</a><a href="https://webring.bucketfish.me/redirect.html?to=random&name=vuvien0000"> Random<a href="https://webring.bucketfish.me/redirect.html?to=next&name=vuvien0000"> ></a></p>
+<p><a href="https://hotlinewebring.club/"> Hotline Ring  -</a><a href="https://hotlinewebring.club/vuvien0000/previous"> &lt;</a><a href="https://hotlinewebring.club/vuvien0000/next"> ></a></p>
+<p><a href="https://gradientring.nekoweb.org">Gradient Ring  -</a><a href="https://gradientring.nekoweb.org/s/vuvien0000/prev"> &lt;</a><a href="https://gradientring.nekoweb.org/s/vuvien0000/next"> ></a></p>
+<p></p><a href="https://cxyz.web.app/">Castlexyz Ring  -</a><a href="https://cxyz.web.app/previous/?site=vuvien.xyz"> &lt;</a><a href="https://cxyz.web.app/random/?site=vuvien.xyz"> Random</a><a href="https://cxyz.web.app/next/?site=vuvien.xyz"> ></a></p>
+			</div>
+	</div>
+</details>
+<details>
+	<summary><img src="https://vuvien.nekoweb.org/images/newicons/tip-jar.png"><span class="summary-txt">Tipping</span></summary>	
+	<div style="padding: 0;" class="content">
+		<p class="pinned-top">If you would like to support a broke student to keep creating</p>
+		<div style="padding: 10px;">
+	<p>Thanks for checking in!!<br> all the money will be use to keep the vuvien.xyz domain alive</p>
+	<a href="https://ko-fi.com/vuvien0000">
+	<button><img style="width: 20px;float: left;margin-inline-end: 10px;" src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png">  Give tip</button></a> <a href="https://media.tenor.com/KFiUJSB2ndcAAAAe/cute-cat-cat.png">
+		<button>Hell no</button></a></div>
+</details>
+<details>
+	<summary onclick="faq()"><img src="https://vuvien.nekoweb.org/images/newicons/ns-player.png"><span class="summary-txt">FAQ</span></summary>
+	<div style="padding: 0;" class="content">
+<p class="pinned-top">Frequently asked questions, now answered</p>
+<iframe id="deck-faq" src="" width="450" height="auto" frameborder="0" scrolling="no" credentialless allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="width: 100%; aspect-ratio: 450/729; height: auto;"></iframe>
+	</div></div>
+</details>
+<details>
+	<summary><img src="https://vuvien.nekoweb.org/images/newicons/shapes.png"><span class="summary-txt">Other</span></summary>
+	<div class="content">
+		<div class="pinned lab">
+	<h3>Got some time?</h3>
+	<p>take a short survey to help vien with researching</p>
+	<a href="https://forms.gle/LtozzAFsxo1v5UM47"><button>Take survey</button></a>
+</div>
+<div class="pinned">
+	<a href="https://discord.gg/GNQ2CUYyYp"><button>Join</button></a>
+	<script src="/dcscript.js"></script>
+<div id="upper">
+            <div style="display:none" id="banner"></div>
         </div>
-<!-- -->
-        <div class="snug-ring-box bucket">
-        	<a href="https://webring.bucketfish.me">
-        	<div class="snug-ring-box-label">
-        		<img class="snug-ring-box-label icon" src="https://avatars.githubusercontent.com/u/66538443?v=4">
-        	<p>Bucket Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=vuvien0000">
-        		<button class="snug-ring-box-button-navigate">Prev</button>
-        		</a>
-<a href="https://webring.bucketfish.me/redirect.html?to=random&name=vuvien0000">
-	<button class="snug-ring-box-button-navigate">Random</button></a>
-        		<a href="https://webring.bucketfish.me/redirect.html?to=next&name=vuvien0000"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
-        </div>
-<!-- -->
-        <div class="snug-ring-box hotline">
-        	<a href="https://hotlinewebring.club/">
-        	<div class="snug-ring-box-label">
-        		<img style="width:40px;height:40px;top:-1px;left:-3px" class="snug-ring-box-label icon" src="https://vuvien.nekoweb.org/images/icons/pink-phone.png">
-        	<p>Hotline Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://hotlinewebring.club/vuvien0000/previous">
-        		<button class="snug-ring-box-button-navigate">Previous</button>
-        		</a>
-        		<a href="https://hotlinewebring.club/vuvien0000/next"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
-        </div>
-<!-- -->
-                <div class="snug-ring-box gradient">
-        	<a href="https://gradientring.nekoweb.org">
-        	<div class="snug-ring-box-label">
-        		<img class="snug-ring-box-label icon" style="rotate:inherit;filter:invert(100%)" src="https://cdn-icons-png.flaticon.com/512/565/565838.png">
-        	<p>Gradient Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://gradientring.nekoweb.org/s/vuvien0000/prev">
-        		<button class="snug-ring-box-button-navigate">Prev</button>
-        		</a>
-        		<a href="https://gradientring.nekoweb.org/s/vuvien0000/next"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
-        	</div>
-			<!-- -->
-                <div class="snug-ring-box gradient">
-        	<a href="https://cxyz.web.app/">
-        	<div class="snug-ring-box-label">
-        		<img class="snug-ring-box-label icon" style="display:none;rotate:inherit;filter:invert(100%)" src="https://cdn-icons-png.flaticon.com/512/565/565838.png">
-        	<p>Castlexyz Ring</p>
-        	</div>
-        	</a>
-        	<div class="snug-ring-box-button">
-        		<a href="https://cxyz.web.app/previous/?site=vuvien.xyz">
-        		<button class="snug-ring-box-button-navigate">Prev</button>
-        		</a>
-				<a href="https://cxyz.web.app/random/?site=vuvien.xyz">
-        		<button class="snug-ring-box-button-navigate">Random</button>
-        		</a>
-        		<a href="https://cxyz.web.app/next/?site=vuvien.xyz"><button class="snug-ring-box-button-navigate">Next</button></a>
-        	</div>
-        	</div>
+        <div id="lower">
+<div id="iconframe">
+<div class="server-icon">
+<img id="icon">
+</div>
+</div>
+<div id="dataframe">
+<div style="display:none" id="inviter">
+<span style="display:none" id="invitername"></span><span id="invitertag"></span>
+</div>
+<p style="position:relative;top:-10px" id="servername">Loading...</p>
+<p style="font-weight:bold;margin-block-end:10px" id="counts">
+<span id="membercount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#39db90" id="onlinecount">•••</span> <span style="opacity:0.5">•</span> <span style="color:#ff7af8" id="boostcount">•••</span></p>
+</div></div></div>
+<div class="pinned">
+	<h3>Credits</h3>
+	<p>fonts used</p>
+<ol type="1" start="1">
+<li><a href="https://fonts.google.com/specimen/Space+Mono">Spacemono</a></li>
+<li><a href="https://fonts.google.com/specimen/Google+Sans">Google Sans</a></li>
+<li><a href="https://fonts.google.com/specimen/DM+Sans">DM Sans</a></li>
+<li><a href="https://fonts.google.com/specimen/DotGothic16">Dot Gothic16</a></li>
+<li><a href="https://fontmeme.com/fonts/basteleur-font/">Basteluer</a></li>
+</ol>
+	<p>services</p>
+<ol type="1" start="1">
+<li>Game engine <a href="https://castle.xyz">castle.xyz</a></li>
+<li>File & website hosting <a href="https://nekoweb.org">nekoweb.org</a> & <a href="https://github.com">github.com</a></li>
+<li>Guestbook <a href="https://atabook.org">atabook.org</a></li>
+<li>Image viewer <a href="https://widget.st">widget.st</a></li>
+<li>Video player <a href="https://fluidplayer.com">fluidplayer.com</a></li>
+</ol>
+	<p>please do not use any parts of this website for production,commercial or personal</p>
+</div>
+	</div>
+</details>
         </div>
     	</div>
+		<div class="footer-imgwrap">
+		<img src="https://vuvien.nekoweb.org/images/newicons/hands.svg" class="footer-upperimg">
     	</div>
+	</div>
     	</div>
+<div class="footer">
+	<div class="footer-wrap">
+	<p>vuvien is not affiliated with <a style="color:white;" href="https://castle.xyz"><span style="font-family: basteluer;">Castle.xyz</span></a> in anyway</p>
+	<a href="https://ko-fi.com/vuvien0000"><img src="https://storage.ko-fi.com/cdn/brandasset/v2/support_me_on_kofi_beige.png"></a>
+<div class="socials-footer">
+<a href="https://discord.com/users/777798212743856128"><img style="top:2px" src="images/icons2/dc.png"></a>
+<a href="https://www.tiktok.com/@vuvien0000?_r=1&_t=ZS-947277LHmJI"><img src="images/icons2/tt.png"></a>
+<a href="https://castle.xyz/@no_skills_"><img src="images/icons2/cc.png"> </a>
+<a href="https://github.com/vuvien0000"><img src="images/icons2/gh.png"></a>
+<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847"><img src="images/icons2/rb.png"></a>
+</div>
+
+</div><img class="footer-logo" src="/images/logo-white.svg"></div>
     </body>
     </html>
