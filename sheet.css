@@ -487,7 +487,6 @@ overflow: hidden;
 	padding: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	background:linear-gradient(to bottom,black, rgba(38,22,75,0));
 }
 #deck-frame {
 	position: relative;
@@ -722,4 +721,7 @@ li {
 	scale: 2;
 	z-index: -1;
 	pointer-events: none;
+}
+.bg-color {
+	background:linear-gradient(to bottom,black, rgba(38,22,75,0));
 }
